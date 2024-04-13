@@ -1,0 +1,32 @@
+{
+    "company": {
+        "en": [
+            "Our company was founded in 2005 with a focus on innovation and customer satisfaction.",
+            "We have been in business for over 15 years, providing quality products and services.",
+            "What sets us apart is our commitment to excellence and our dedicated team.",
+            "Our mission is to provide the best possible solutions for our customers.",
+            "The culture at our company is one of collaboration, innovation, and continuous improvement."
+        ],
+        "id": [
+            "Perusahaan kami didirikan pada tahun 2005 dengan fokus pada inovasi dan kepuasan pelanggan.",
+            "Kami telah beroperasi selama lebih dari 15 tahun, menyediakan produk dan layanan berkualitas.",
+            "Yang membedakan kami adalah komitmen kami terhadap keunggulan dan tim yang berdedikasi.",
+            "Misi kami adalah untuk memberikan solusi terbaik bagi pelanggan kami.",
+            "Budaya di perusahaan kami adalah kerjasama, inovasi, dan perbaikan terus-menerus."
+        ]
+    },
+    "team": {
+        "en": [
+            "Our team consists of experts in their respective fields, with years of experience in the industry.",
+            "We have a diverse team that brings unique perspectives to our projects.",
+            "Collaboration is key in our team, and we often hold brainstorming sessions to generate new ideas.",
+            "We offer regular training sessions and opportunities for professional development to our team members."
+        ],
+        "id": [
+            "Tim kami terdiri dari ahli di bidang masing-masing, dengan pengalaman bertahun-tahun dalam industri.",
+            "Kami memiliki tim yang beragam yang membawa perspektif unik ke proyek-proyek kami.",
+            "Kerjasama adalah kunci di tim kami, dan kami sering mengadakan sesi brainstorming untuk menghasilkan ide-ide baru.",
+            "Kami menawarkan sesi pelatihan reguler dan kesempatan untuk pengembangan profesional kepada anggota tim kami."
+        ]
+    }
+}

@@ -1,0 +1,52 @@
+{
+    "schedule": {
+        "en": [
+            "When does the store open on weekdays?",
+            "Are you open late tonight?",
+            "What are your adjusted hours for?",
+            "I'd like to visit this afternoon.",
+            "How early can I come in on?",
+            "When store is open?"
+        ],
+        "id": [
+            "Jam berapa toko buka di hari biasa?",
+            "Apakah toko buka sampai larut malam ini?",
+            "Bagaimana jam operasional khusus?",
+            "Saya ingin berkunjung sore ini. Apakah toko buka pada pukul?",
+            "Seberapa awal saya bisa datang pada hari?",
+            "Kapan toko dibuka?"
+        ]
+    },
+    "promo": {
+        "en": [
+            "Are there any specific promotions on [product category]?",
+            "Do you offer any discounts for new customers?",
+            "When does this current promotion end?",
+            "How can I apply the promo code I received?",
+            "Is there a loyalty program available?"
+        ],
+        "id": [
+            "Apakah ada promo khusus untuk [kategori produk]?",
+            "Apakah Anda menawarkan diskon untuk pelanggan baru?",
+            "Kapan promosi ini berakhir?",
+            "Bagaimana cara menggunakan kode promo yang saya terima?",
+            "Apakah ada program loyalitas yang tersedia?"
+        ]
+    },
+    "location": {
+        "en": [
+            "In which city is your closest store located?",
+            "Is there a store near [landmark]?",
+            "What is the phone number for your [store location]?",
+            "Can I schedule an appointment to visit the store?",
+            "Is your store accessible by public transportation?"
+        ],
+        "id": [
+            "Di kota mana toko terdekat Anda berada?",
+            "Apakah ada toko di dekat [titik landmark]?",
+            "Berapa nomor telepon untuk [lokasi toko]?",
+            "Dapatkah saya membuat janji untuk mengunjungi toko?",
+            "Apakah toko Anda dapat diakses dengan transportasi umum?"
+        ]
+    }
+}

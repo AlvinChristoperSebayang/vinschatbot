@@ -17,7 +17,7 @@ def preprocess_text(text, language):
 # Daftar pertanyaan
 questions = [
     "when the store is open?",
-    "Pukul berapa toko dibuka?"
+    "dimana toko anda berada?"
 ]
 
 # Kamus jawaban

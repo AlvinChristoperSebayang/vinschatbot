@@ -1,0 +1,38 @@
+{
+    "schedule": {
+        "en": [
+            "The store opens at 9 AM and closes at 6 PM on weekdays. We are open until 10 PM on Fridays and Saturdays.",
+            "Our store is open from 9 AM to 6 PM on weekdays and until 10 PM on Fridays and Saturdays.",
+            "The store's hours are 9 AM to 6 PM on weekdays and extended to 10 PM on Fridays and Saturdays."
+        ],
+        "id": [
+            "Toko buka pada pukul 9 pagi dan tutup pukul 6 sore di hari kerja. Kami buka hingga pukul 10 malam pada Jumat dan Sabtu.",
+            "Jam buka toko kami adalah dari jam 9 pagi hingga 6 sore pada hari kerja dan diperpanjang hingga jam 10 malam pada Jumat dan Sabtu.",
+            "Jam operasional toko kami adalah dari jam 9 pagi hingga 6 sore pada hari kerja dan diperpanjang hingga jam 10 malam pada Jumat dan Sabtu."
+        ]
+    },
+    "promo": {
+        "en": [
+            "We currently have a promotion offering 20% off all items in the [product category]. The promotion ends on [end date].",
+            "Get 20% off on all items in the [product category] with our current promotion. Hurry, ends on [end date]!",
+            "Don't miss our latest promotion! Enjoy 20% off on all items in the [product category] until [end date]."
+        ],
+        "id": [
+            "Saat ini kami memiliki promo yang menawarkan diskon 20% untuk semua produk dalam kategori [kategori produk]. Promo berakhir pada [tanggal berakhir].",
+            "Dapatkan diskon 20% untuk semua produk dalam kategori [kategori produk] dengan promo kami saat ini. Buruan, berakhir pada [tanggal berakhir]!",
+            "Jangan lewatkan promo terbaru kami! Nikmati diskon 20% untuk semua produk dalam kategori [kategori produk] hingga [tanggal berakhir]."
+        ]
+    },
+    "location": {
+        "en": [
+            "Our closest store is located in City A. For more information on our other store locations, please visit our website.",
+            "You can find our nearest store in City A. Visit our website for details on our other locations.",
+            "The closest store to you is in City A. Check out our website to find more locations near you."
+        ],
+        "id": [
+            "Toko terdekat kami berlokasi di Kota A. Untuk informasi lebih lanjut mengenai lokasi toko kami yang lain, silakan kunjungi website kami.",
+            "Anda dapat menemukan toko terdekat kami di Kota A. Kunjungi website kami untuk detail lokasi toko kami yang lain.",
+            "Toko terdekat dari lokasi Anda berada di Kota A. Cek website kami untuk mengetahui lokasi lainnya yang dekat dengan Anda."
+        ]
+    }
+}
