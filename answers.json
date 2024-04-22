@@ -52,7 +52,7 @@
             
         ]
     },
-    "wordpress": {
+
         "aboutWordpress": {
             "en": [
                 "WordPress is a popular content management system (CMS) that allows you to create and manage websites easily. It is known for its user-friendly interface and customizable features.",
@@ -92,16 +92,5 @@
                 "Dalam WordPress, postingan adalah entri yang terdaftar dalam urutan kronologis terbalik di blog atau situs web Anda. Mereka biasanya digunakan untuk pembaruan berita, artikel blog, dan konten lainnya yang bersifat waktu.",
                 "Halaman, di sisi lain, adalah konten statis dan mandiri yang tidak terdaftar berdasarkan tanggal. Mereka sering digunakan untuk halaman statis seperti 'Tentang Kami', 'Kontak', atau 'Layanan'."
             ]
-        },
-        "update": {
-            "en": [
-                "To update WordPress to the latest version, you can go to the 'Dashboard' and click on 'Updates'. If there is a new version available, you will see a message prompting you to update. Click on 'Update Now' to install the latest version.",
-                "It is important to regularly update WordPress, plugins, and themes to ensure your site is secure and running smoothly. Updates often include security patches, bug fixes, and new features."
-            ],
-            "id": [
-                "Untuk memperbarui WordPress ke versi terbaru, Anda dapat pergi ke 'Dasbor' dan klik 'Pembaruan'. Jika ada versi baru yang tersedia, Anda akan melihat pesan yang meminta Anda memperbarui. Klik 'Perbarui Sekarang' untuk menginstal versi terbaru.",
-                "Penting untuk secara teratur memperbarui WordPress, plugin, dan tema untuk memastikan situs Anda aman dan berjalan lancar. Pembaruan sering termasuk perbaikan keamanan, perbaikan bug, dan fitur baru."
-            ]
         }
     }    
-}

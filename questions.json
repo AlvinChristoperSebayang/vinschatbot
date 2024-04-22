@@ -82,12 +82,12 @@
     "wordpress": {
         "aboutWordpress": {
             "en": [
-                "What is WordPress?",
+                "What is the meaning of WordPress?",
                 "What is the purpose of WordPress?",
                 "How do you create a website with WordPress?"
             ],
             "id": [
-                "Apa itu WordPress?",
+                "Apa yang dimaksud WordPress?",
                 "Apa tujuan dari WordPress?",
                 "Bagaimana cara membuat situs web dengan WordPress?"
             ]
@@ -126,18 +126,6 @@
                 "Apa itu posting dan halaman di WordPress?",
                 "Bagaimana cara membuat posting atau halaman baru di WordPress?",
                 "Dapatkah Anda menjelaskan perbedaan antara posting dan halaman di WordPress?"
-            ]
-        },
-        "update": {
-            "en": [
-                "How do you update WordPress to the latest version?",
-                "How do you update plugins and themes in WordPress?",
-                "Is it important to regularly update WordPress?"
-            ],
-            "id": [
-                "Bagaimana cara memperbarui WordPress ke versi terbaru?",
-                "Bagaimana cara memperbarui plugin dan tema di WordPress?",
-                "Apakah penting untuk secara teratur memperbarui WordPress?"
             ]
         }
 }
