@@ -1,0 +1,54 @@
+{
+    "intents": [
+        {
+            "tag": "historyCompany",
+            "patterns": [
+                "What is the history of your company?",
+                "Can you tell me about your history company?",
+                "Let me know about your history company?"
+            ]
+        },
+        {
+            "tag": "visionAndMission",
+            "patterns": [
+                "What is your company's vision and mission?",
+                "What is your company's vision?",
+                "What is your company's mission?",
+                "Can you tell me about your company's vision and mission?",
+                "What are the core values of your company?"
+            ]
+        },
+        {
+            "tag": "cultureCompany",
+            "patterns": [
+                "Can you describe the culture at your company?",
+                "What is the work culture like at your company?",
+                "How would you define the culture of your company?"
+            ]
+        },
+        {
+            "tag": "productsServices",
+            "patterns": [
+                "What products or services does your company offer?",
+                "Can you tell me about the products or services your company provides?",
+                "What are the main products or services of your company?"
+            ]
+        },
+        {
+            "tag": "teamCompany",
+            "patterns": [
+                "Can you introduce me to your team?",
+                "Who are the key members of your team?",
+                "Tell me about the people who work at your company."
+            ]
+        },
+        {
+            "tag": "futureCompany",
+            "patterns": [
+                "Our company is planning to expand its services globally and establish itself as a key player in the industry.",
+                "We have several upcoming projects, including the development of new software solutions and partnerships with leading companies.",
+                "In the future, we aim to be at the forefront of innovation, continuously improving our products and services to meet the evolving needs of our clients."
+            ]
+        }
+    ]
+}

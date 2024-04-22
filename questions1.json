@@ -1,94 +1,16 @@
 {
-    "company": {
-        "en": [
-            "Can you tell me about your company?",
-            "What is the history of your company?",
-            "How long has your company been in business?",
-            "What sets your company apart from others?",
-            "What is your company's mission statement?",
-            "Can you describe the culture at your company?"
-        ],
-        "id": [
-            "Bisakah Anda ceritakan tentang perusahaan Anda?",
-            "Apa sejarah perusahaan Anda?",
-            "Berapa lama perusahaan Anda beroperasi?",
-            "Apa yang membedakan perusahaan Anda dari yang lain?",
-            "Apa pernyataan misi perusahaan Anda?",
-            "Bisakah Anda mendeskripsikan budaya di perusahaan Anda?"
-        ]
-    },
-    "team": {
-        "en": [
-            "Who are the key members of your team?",
-            "What expertise does your team have?",
-            "Can you introduce me to your team?",
-            "How does your team collaborate on projects?",
-            "What kind of training or development opportunities do you offer your team?"
-        ],
-        "id": [
-            "Siapa anggota kunci dari tim Anda?",
-            "Apa keahlian yang dimiliki oleh tim Anda?",
-            "Bisakah Anda memperkenalkan saya kepada tim Anda?",
-            "Bagaimana tim Anda berkolaborasi dalam proyek?",
-            "Apa jenis pelatihan atau kesempatan pengembangan yang Anda tawarkan kepada tim Anda?"
-        ]
-    },
-    "values": {
-        "en": [
-            "What are the core values of your company?",
-            "How do you ensure your company valsues are reflected in your work?",
-            "Are there any social or environmental initiatives your company is involved in?",
-            "How do you prioritize diversity and inclusion in your company?",
-            "Do you have a code of conduct or ethics policy for your company?"
-        ],
-        "id": [
-            "Apa nilai inti dari perusahaan Anda?",
-            "Bagaimana Anda memastikan nilai-nilai perusahaan Anda tercermin dalam pekerjaan Anda?",
-            "Apakah ada inisiatif sosial atau lingkungan yang perusahaan Anda ikuti?",
-            "Bagaimana Anda memprioritaskan keragaman dan inklusi di perusahaan Anda?",
-            "Apakah Anda memiliki kode etik atau kebijakan etika untuk perusahaan Anda?"
-        ]
-    },
-    "achievements": {
-        "en": [
-            "What are some notable achievements or milestones of your company?",
-            "Can you share any awards or recognition your company has received?",
-            "How has your company contributed to the industry or community?",
-            "Do you have any success stories or case studies from your company?"
-        ],
-        "id": [
-            "Apa pencapaian atau tonggak bersejarah yang mencolok dari perusahaan Anda?",
-            "Bisakah Anda berbagi penghargaan atau pengakuan yang diterima perusahaan Anda?",
-            "Bagaimana perusahaan Anda berkontribusi pada industri atau komunitas?",
-            "Apakah Anda memiliki cerita sukses atau studi kasus dari perusahaan Anda?"
-        ]
-    },
-    "future": {
-        "en": [
-            "What are your company's future goals or plans?",
-            "How do you envision your company evolving in the future?",
-            "Are there any upcoming projects or initiatives your company is excited about?",
-            "How do you plan to stay competitive in the market?"
-        ],
-        "id": [
-            "Apa tujuan atau rencana masa depan perusahaan Anda?",
-            "Bagaimana Anda memvisualisasikan perkembangan perusahaan Anda di masa depan?",
-            "Apakah ada proyek atau inisiatif mendatang yang membuat perusahaan Anda bersemangat?",
-            "Bagaimana Anda berencana untuk tetap kompetitif di pasar?"
-        ]
-    },
-    "contact": {
-        "en": [
-            "How can I contact your company for more information?",
-            "What are your company's contact details?",
-            "Is there a specific department I should contact for inquiries?",
-            "Do you have a physical location or office where I can visit?"
-        ],
-        "id": [
-            "Bagaimana cara saya menghubungi perusahaan Anda untuk informasi lebih lanjut?",
-            "Apa rincian kontak perusahaan Anda?",
-            "Apakah ada departemen khusus yang harus saya hubungi untuk pertanyaan?",
-            "Apakah Anda memiliki lokasi fisik atau kantor tempat saya bisa mengunjungi?"
-        ]
-    }
+    "testing":[
+        {
+            "kowkoawko" : "awkokaowko",
+            "koawkoakowoawkoawko" : "akowkoawo" 
+        },
+        {
+            "kowkoawko" : "awkokaowko",
+            "koawkoakowoawkoawko" : "akowkoawo" 
+        },
+        {
+            "kowkoawko" : "awkokaowko",
+            "koawkoakowoawkoawko" : "akowkoawo" 
+        }
+    ]
 }

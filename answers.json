@@ -1,38 +1,107 @@
 {
-    "schedule": {
+    "historyCompany": {
         "en": [
-            "The store opens at 9 AM and closes at 6 PM on weekdays. We are open until 10 PM on Fridays and Saturdays.",
-            "Our store is open from 9 AM to 6 PM on weekdays and until 10 PM on Fridays and Saturdays.",
-            "The store's hours are 9 AM to 6 PM on weekdays and extended to 10 PM on Fridays and Saturdays."
+            "Our company, Mangcoding, was founded in 2022 by Nugraha, who has more than 10 years of experience in website development. Since its inception, Mangcoding has been dedicated to providing high-quality website development services.",
+            "Experiencing in Web Development more than 10 Years, Nugraha as a Project Manager in Mangcoding always get offer to work with company to build and manage their website. With his background as developer with US Company, he decide to create team in 2022."
         ],
         "id": [
-            "Toko buka pada pukul 9 pagi dan tutup pukul 6 sore di hari kerja. Kami buka hingga pukul 10 malam pada Jumat dan Sabtu.",
-            "Jam buka toko kami adalah dari jam 9 pagi hingga 6 sore pada hari kerja dan diperpanjang hingga jam 10 malam pada Jumat dan Sabtu.",
-            "Jam operasional toko kami adalah dari jam 9 pagi hingga 6 sore pada hari kerja dan diperpanjang hingga jam 10 malam pada Jumat dan Sabtu."
+            "Perusahaan kami, Mangcoding, didirikan pada tahun 2022 oleh Nugraha, yang memiliki pengalaman lebih dari 10 tahun di bidang pengembangan website. Sejak awal berdirinya, Mangcoding telah berkomitmen untuk menyediakan layanan pengembangan website berkualitas tinggi.",
+            "Nugraha, yang memiliki pengalaman lebih dari 10 tahun di bidang pengembangan website, menjabat sebagai Project Manager di Mangcoding dan selalu mendapatkan tawaran untuk bekerja dengan perusahaan untuk membangun dan mengelola website mereka. Dengan latar belakangnya sebagai pengembang di perusahaan Amerika Serikat, ia memutuskan untuk membentuk tim pada tahun 2022."
         ]
     },
-    "promo": {
+    "visionAndMission":{
         "en": [
-            "We currently have a promotion offering 20% off all items in the [product category]. The promotion ends on [end date].",
-            "Get 20% off on all items in the [product category] with our current promotion. Hurry, ends on [end date]!",
-            "Don't miss our latest promotion! Enjoy 20% off on all items in the [product category] until [end date]."
+        "Our vision at Mangcoding is to establish a global leadership position by offering services that are utilized worldwide. Our mission is to simplify performance monitoring, analysis, and enhancement for every individual within an organization, accessible from any device, anywhere.",
+        "At Mangcoding, we aspire to lead globally by providing services used worldwide. Our mission is to streamline performance monitoring, analysis, and improvement for all employees, accessible from any device, anywhere."
         ],
         "id": [
-            "Saat ini kami memiliki promo yang menawarkan diskon 20% untuk semua produk dalam kategori [kategori produk]. Promo berakhir pada [tanggal berakhir].",
-            "Dapatkan diskon 20% untuk semua produk dalam kategori [kategori produk] dengan promo kami saat ini. Buruan, berakhir pada [tanggal berakhir]!",
-            "Jangan lewatkan promo terbaru kami! Nikmati diskon 20% untuk semua produk dalam kategori [kategori produk] hingga [tanggal berakhir]."
+            "Visi kami di Mangcoding adalah menjadi pemimpin global dengan menawarkan layanan yang digunakan di seluruh dunia. Misi kami adalah menyederhanakan pemantauan, analisis, dan peningkatan kinerja bagi setiap individu dalam sebuah organisasi, dapat diakses dari perangkat mana pun, di mana pun.",
+            "Di Mangcoding, kami bermimpi memimpin secara global dengan menyediakan layanan yang digunakan di seluruh dunia. Misi kami adalah menyederhanakan pemantauan, analisis, dan peningkatan kinerja untuk semua karyawan, dapat diakses dari perangkat mana pun, di mana pun."
         ]
     },
-    "location": {
+    "cultureCompany":{
         "en": [
-            "Our closest store is located in City A. For more information on our other store locations, please visit our website.",
-            "You can find our nearest store in City A. Visit our website for details on our other locations.",
-            "The closest store to you is in City A. Check out our website to find more locations near you."
+            "Our company culture is centered around a sense of family, fostering collaboration and innovation. Our work hours start at 8 AM WIB (1 AM GMT) and end at 5 PM WIB (10 AM GMT), promoting work-life balance and productivity.",
+            "At Mangcoding, we pride ourselves on our familial culture, encouraging collaboration and innovation. Our office hours are from 8 AM to 5 PM WIB (1 AM to 10 AM GMT), ensuring a healthy work-life balance and optimal productivity."
         ],
         "id": [
-            "Toko terdekat kami berlokasi di Kota A. Untuk informasi lebih lanjut mengenai lokasi toko kami yang lain, silakan kunjungi website kami.",
-            "Anda dapat menemukan toko terdekat kami di Kota A. Kunjungi website kami untuk detail lokasi toko kami yang lain.",
-            "Toko terdekat dari lokasi Anda berada di Kota A. Cek website kami untuk mengetahui lokasi lainnya yang dekat dengan Anda."
+            "Budaya perusahaan kami berpusat pada rasa kekeluargaan, mendorong kolaborasi dan inovasi. Jam kerja kami dimulai pukul 8 pagi WIB dan berakhir pukul 5 sore WIB, mempromosikan keseimbangan antara kehidupan kerja dan produktivitas.",
+            "Di Mangcoding, kami bangga dengan budaya kekeluargaan kami, mendorong kolaborasi dan inovasi. Jam kerja kami adalah dari pukul 8 pagi hingga 5 sore WIB, memastikan keseimbangan yang sehat antara kehidupan kerja dan produktivitas yang optimal."
         ]
-    }
+    },
+    "teamCompany":{
+        "en": [
+            "Our team at Mangcoding is a diverse group of talented individuals who are passionate about creating innovative solutions. Led by our experienced project manager, Nugraha, each member brings unique skills and perspectives to the table. From developers to designers, our team works collaboratively to deliver high-quality results for our clients.",
+            "At Mangcoding, we pride ourselves on our familial culture, encouraging collaboration and innovation. Our office hours are from 8 AM to 5 PM WIB (1 AM to 10 AM GMT), ensuring a healthy work-life balance and optimal productivity."
+        ],
+        "id": [
+            "Budaya perusahaan kami berpusat pada rasa kekeluargaan, mendorong kolaborasi dan inovasi. Jam kerja kami dimulai pukul 8 pagi WIB dan berakhir pukul 5 sore WIB, mempromosikan keseimbangan antara kehidupan kerja dan produktivitas.",
+            "Di Mangcoding, kami bangga dengan budaya kekeluargaan kami, mendorong kolaborasi dan inovasi. Jam kerja kami adalah dari pukul 8 pagi hingga 5 sore WIB, memastikan keseimbangan yang sehat antara kehidupan kerja dan produktivitas yang optimal."
+        ]
+    },
+    "futureCompany":{
+        "en": [
+            "Our company is planning to expand its services globally and establish itself as a key player in the industry. We have several upcoming projects, including the development of new software solutions and partnerships with leading companies. In the future, we aim to be at the forefront of innovation, continuously improving our products and services to meet the evolving needs of our clients.",
+            "We are focused on enhancing our technology and services to stay ahead of the competition. This includes investing in research and development to create cutting-edge solutions for our clients.",
+            "In the coming years, we aim to strengthen our partnerships with other industry leaders and explore new avenues for growth and development."
+        ],
+        "id": [
+            "Perusahaan kami berencana untuk memperluas layanannya secara global dan menjadikan dirinya sebagai pemain kunci di industri ini. Kami memiliki beberapa proyek mendatang, termasuk pengembangan solusi perangkat lunak baru dan kemitraan dengan perusahaan-perusahaan terkemuka. Di masa depan, kami bertujuan untuk menjadi yang terdepan dalam inovasi, terus meningkatkan produk dan layanan kami untuk memenuhi kebutuhan yang terus berkembang dari klien kami.",
+            "Kami fokus pada peningkatan teknologi dan layanan kami untuk tetap unggul dari kompetisi. Ini termasuk investasi dalam penelitian dan pengembangan untuk menciptakan solusi terkini bagi klien kami.",
+            "Dalam beberapa tahun mendatang, kami bertujuan untuk memperkuat kemitraan kami dengan pemimpin industri lainnya dan mengeksplorasi jalur baru untuk pertumbuhan dan pengembangan."
+            
+        ]
+    },
+    "wordpress": {
+        "aboutWordpress": {
+            "en": [
+                "WordPress is a popular content management system (CMS) that allows you to create and manage websites easily. It is known for its user-friendly interface and customizable features.",
+                "The purpose of WordPress is to provide a platform for creating websites, blogs, and online stores without the need for extensive technical knowledge. It offers a wide range of themes and plugins to customize the appearance and functionality of your site."
+            ],
+            "id": [
+                "WordPress adalah sistem manajemen konten (CMS) yang populer yang memungkinkan Anda membuat dan mengelola situs web dengan mudah. WordPress dikenal dengan antarmuka yang ramah pengguna dan fitur yang dapat disesuaikan.",
+                "Tujuan dari WordPress adalah menyediakan platform untuk membuat situs web, blog, dan toko online tanpa perlu pengetahuan teknis yang mendalam. WordPress menawarkan berbagai tema dan plugin untuk menyesuaikan tampilan dan fungsionalitas situs Anda."
+            ]
+        },
+        "plugin": {
+            "en": [
+                "A plugin in WordPress is a piece of software that adds specific features or functionality to your website. Plugins can be used to enhance security, optimize performance, and add new features such as contact forms, social media integration, and SEO tools.",
+                "To install a plugin in WordPress, you can go to the 'Plugins' section in your WordPress dashboard, click on 'Add New', and then search for the plugin you want to install. Once you find it, click on 'Install Now' and then 'Activate' to enable the plugin on your site."
+            ],
+            "id": [
+                "Plugin dalam WordPress adalah bagian perangkat lunak yang menambahkan fitur atau fungsionalitas tertentu ke situs web Anda. Plugin dapat digunakan untuk meningkatkan keamanan, mengoptimalkan kinerja, dan menambah fitur baru seperti formulir kontak, integrasi media sosial, dan alat SEO.",
+                "Untuk menginstal plugin di WordPress, Anda dapat pergi ke bagian 'Plugin' di dasbor WordPress Anda, klik 'Tambah Baru', lalu cari plugin yang ingin Anda instal. Setelah Anda menemukannya, klik 'Instal Sekarang' dan kemudian 'Aktifkan' untuk mengaktifkan plugin di situs Anda."
+            ]
+        },
+        "theme": {
+            "en": [
+                "A theme in WordPress is a collection of files that determine the look and feel of your website. Themes can be used to change the layout, color scheme, fonts, and other visual elements of your site.",
+                "To install a theme in WordPress, you can go to the 'Themes' section in your WordPress dashboard, click on 'Add New', and then search for the theme you want to install. Once you find it, click on 'Install' and then 'Activate' to apply the theme to your site."
+            ],
+            "id": [
+                "Tema dalam WordPress adalah kumpulan file yang menentukan tampilan situs web Anda. Tema dapat digunakan untuk mengubah tata letak, skema warna, jenis huruf, dan elemen visual lainnya dari situs Anda.",
+                "Untuk menginstal tema di WordPress, Anda dapat pergi ke bagian 'Tema' di dasbor WordPress Anda, klik 'Tambah Baru', lalu cari tema yang ingin Anda instal. Setelah Anda menemukannya, klik 'Instal' dan kemudian 'Aktifkan' untuk menerapkan tema ke situs Anda."
+            ]
+        },
+        "postPage": {
+            "en": [
+                "In WordPress, posts are entries listed in reverse chronological order on your blog or website. They are typically used for news updates, blog articles, and other timely content.",
+                "Pages, on the other hand, are static, standalone content that are not listed by date. They are often used for static pages like 'About Us', 'Contact', or 'Services'."
+            ],
+            "id": [
+                "Dalam WordPress, postingan adalah entri yang terdaftar dalam urutan kronologis terbalik di blog atau situs web Anda. Mereka biasanya digunakan untuk pembaruan berita, artikel blog, dan konten lainnya yang bersifat waktu.",
+                "Halaman, di sisi lain, adalah konten statis dan mandiri yang tidak terdaftar berdasarkan tanggal. Mereka sering digunakan untuk halaman statis seperti 'Tentang Kami', 'Kontak', atau 'Layanan'."
+            ]
+        },
+        "update": {
+            "en": [
+                "To update WordPress to the latest version, you can go to the 'Dashboard' and click on 'Updates'. If there is a new version available, you will see a message prompting you to update. Click on 'Update Now' to install the latest version.",
+                "It is important to regularly update WordPress, plugins, and themes to ensure your site is secure and running smoothly. Updates often include security patches, bug fixes, and new features."
+            ],
+            "id": [
+                "Untuk memperbarui WordPress ke versi terbaru, Anda dapat pergi ke 'Dasbor' dan klik 'Pembaruan'. Jika ada versi baru yang tersedia, Anda akan melihat pesan yang meminta Anda memperbarui. Klik 'Perbarui Sekarang' untuk menginstal versi terbaru.",
+                "Penting untuk secara teratur memperbarui WordPress, plugin, dan tema untuk memastikan situs Anda aman dan berjalan lancar. Pembaruan sering termasuk perbaikan keamanan, perbaikan bug, dan fitur baru."
+            ]
+        }
+    }    
 }

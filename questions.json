@@ -1,52 +1,144 @@
 {
-    "schedule": {
+    "company": {
+    "historyCompany": {
         "en": [
-            "When does the store open on weekdays?",
-            "Are you open late tonight?",
-            "What are your adjusted hours for?",
-            "I'd like to visit this afternoon.",
-            "How early can I come in on?",
-            "When store is open?"
+            "What is the history of your company?",
+            "Can you tell me about your history company?",
+            "Let me know about your history company?"
         ],
         "id": [
-            "Jam berapa toko buka di hari biasa?",
-            "Apakah toko buka sampai larut malam ini?",
-            "Bagaimana jam operasional khusus?",
-            "Saya ingin berkunjung sore ini. Apakah toko buka pada pukul?",
-            "Seberapa awal saya bisa datang pada hari?",
-            "Kapan toko dibuka?"
+            "Apa sejarah perusahaan Anda?",
+            "Bisakah anda katakan pada saya mengenai sejarah perusahaan Anda?",
+            "Biarkan saya mengetahui mengenai sejarah perusahaan Anda?"
         ]
     },
-    "promo": {
+    "visionAndMission": {
         "en": [
-            "Are there any specific promotions on [product category]?",
-            "Do you offer any discounts for new customers?",
-            "When does this current promotion end?",
-            "How can I apply the promo code I received?",
-            "Is there a loyalty program available?"
+            "What is your company's vision and mission?",
+            "What is your company's vision?",
+            "What is your company's mission?",
+            "Can you tell me about your company's vision and mission?",
+            "What are the core values of your company?"
         ],
         "id": [
-            "Apakah ada promo khusus untuk [kategori produk]?",
-            "Apakah Anda menawarkan diskon untuk pelanggan baru?",
-            "Kapan promosi ini berakhir?",
-            "Bagaimana cara menggunakan kode promo yang saya terima?",
-            "Apakah ada program loyalitas yang tersedia?"
+            "Apa visi dan misi perusahaan Anda?",
+            "Bisakah Anda memberitahu saya tentang visi dan misi perusahaan Anda?",
+            "Apa nilai inti dari perusahaan Anda?"
         ]
     },
-    "location": {
+    "cultureCompany": {
         "en": [
-            "In which city is your closest store located?",
-            "Is there a store near [landmark]?",
-            "What is the phone number for your [store location]?",
-            "Can I schedule an appointment to visit the store?",
-            "Is your store accessible by public transportation?"
+            "Can you describe the culture at your company?",
+            "What is the work culture like at your company?",
+            "How would you define the culture of your company?"
         ],
         "id": [
-            "Di kota mana toko terdekat Anda berada?",
-            "Apakah ada toko di dekat [titik landmark]?",
-            "Berapa nomor telepon untuk [lokasi toko]?",
-            "Dapatkah saya membuat janji untuk mengunjungi toko?",
-            "Apakah toko Anda dapat diakses dengan transportasi umum?"
+            "Bisakah Anda mendeskripsikan budaya di perusahaan Anda?",
+            "Bagaimana budaya kerja di perusahaan Anda?",
+            "Bagaimana Anda mendefinisikan budaya perusahaan Anda?"
+        ]
+    },
+    "productsServices": {
+        "en": [
+            "What products or services does your company offer?",
+            "Can you tell me about the products or services your company provides?",
+            "What are the main products or services of your company?"
+        ],
+        "id": [
+            "Produk atau layanan apa yang ditawarkan perusahaan Anda?",
+            "Bisakah Anda memberitahu saya tentang produk atau layanan yang perusahaan Anda sediakan?",
+            "Apa produk atau layanan utama dari perusahaan Anda?"
+        ]
+    },
+    "teamCompany": {
+        "en": [
+            "Can you introduce me to your team?",
+            "Who are the key members of your team?",
+            "Tell me about the people who work at your company."
+        ],
+        "id": [
+            "Bisakah Anda memperkenalkan saya kepada tim Anda?",
+            "Siapa saja anggota kunci tim Anda?",
+            "Ceritakan tentang orang-orang yang bekerja di perusahaan Anda."
+        ]
+    }, 
+    "futureCompany": {
+        "en": [
+            "What are your company's future plans?",
+            "How does your company plan to grow in the future?",
+            "What upcoming projects does your company have?",
+            "How does your company aim to innovate in the future?",
+            "What are your company's goals for the future?"
+        ],
+        "id": [
+            "Apa rencana masa depan perusahaan Anda?",
+            "Bagaimana perusahaan Anda berencana untuk berkembang di masa depan?",
+            "Proyek apa yang akan datang bagi perusahaan Anda?",
+            "Bagaimana perusahaan Anda bertujuan untuk berinovasi di masa depan?",
+            "Apa tujuan perusahaan Anda untuk masa depan?"
         ]
     }
+},
+    "wordpress": {
+        "aboutWordpress": {
+            "en": [
+                "What is WordPress?",
+                "What is the purpose of WordPress?",
+                "How do you create a website with WordPress?"
+            ],
+            "id": [
+                "Apa itu WordPress?",
+                "Apa tujuan dari WordPress?",
+                "Bagaimana cara membuat situs web dengan WordPress?"
+            ]
+        },
+        "plugin": {
+            "en": [
+                "What is a plugin in WordPress?",
+                "How do you install a plugin in WordPress?",
+                "Can you recommend some essential plugins for WordPress?"
+            ],
+            "id": [
+                "Apa itu plugin dalam WordPress?",
+                "Bagaimana cara menginstal plugin di WordPress?",
+                "Dapatkah Anda merekomendasikan beberapa plugin penting untuk WordPress?"
+            ]
+        },
+        "theme": {
+            "en": [
+                "What is a theme in WordPress?",
+                "How do you install a theme in WordPress?",
+                "Can you recommend some popular themes for WordPress?"
+            ],
+            "id": [
+                "Apa itu tema dalam WordPress?",
+                "Bagaimana cara menginstal tema di WordPress?",
+                "Dapatkah Anda merekomendasikan beberapa tema populer untuk WordPress?"
+            ]
+        },
+        "postPage": {
+            "en": [
+                "What are posts and pages in WordPress?",
+                "How do you create a new post or page in WordPress?",
+                "Can you explain the difference between a post and a page in WordPress?"
+            ],
+            "id": [
+                "Apa itu posting dan halaman di WordPress?",
+                "Bagaimana cara membuat posting atau halaman baru di WordPress?",
+                "Dapatkah Anda menjelaskan perbedaan antara posting dan halaman di WordPress?"
+            ]
+        },
+        "update": {
+            "en": [
+                "How do you update WordPress to the latest version?",
+                "How do you update plugins and themes in WordPress?",
+                "Is it important to regularly update WordPress?"
+            ],
+            "id": [
+                "Bagaimana cara memperbarui WordPress ke versi terbaru?",
+                "Bagaimana cara memperbarui plugin dan tema di WordPress?",
+                "Apakah penting untuk secara teratur memperbarui WordPress?"
+            ]
+        }
+}
 }
