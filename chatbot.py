@@ -19,28 +19,31 @@ def clean_text(text):
     lemmatized_tokens = [lemmatizer.lemmatize(token) for token in filtered_tokens]
     return lemmatized_tokens
 
+# Fungsi untuk mengekstrak fitur dari teks
 def extract_features(text):
     features = {}
     for word in clean_text(text):
-        features[word] = features.get(word, 0) + 1
+        features[word] = True
     return features
 
+# Memproses data pelatihan
 training_data = []
 for main_topic, sub_topics in questions.items():
     for sub_topic, questions_dict in sub_topics.items():
         for lang, question_list in questions_dict.items():
             for question in question_list:
                 features = extract_features(question)
-                features['topic'] = main_topic
+                features['topic'] = main_topic  # Menambahkan main topic sebagai fitur
                 training_data.append((features, sub_topic))
 
+# Melatih model Naive Bayes
 classifier = NaiveBayesClassifier.train(training_data)
 
 def detect_language(text):
     try:
         lang = detect(text)
     except:
-        lang = 'en'
+        lang = 'en'  # Default to English if language detection fails
     return lang
 
 def get_answer(question_text):
@@ -49,34 +52,36 @@ def get_answer(question_text):
     intent = classifier.classify(features)
     main_topic = intent
     answers_list = answers.get(intent, {}).get(lang, [])
+    
+    # Jika intent tidak ditemukan, kembalikan pesan bahwa jawaban tidak ditemukan
+    if not answers_list:
+        return main_topic, "Jawaban tidak ditemukan", []
+    
     random.shuffle(answers_list)
     
+    # Memilih satu pertanyaan dari setiap sub topik selain sub topik dari intent yang sedang ditanyakan
     recommended_questions = []
     for topic, sub_topics in questions.items():
         if topic == main_topic:
             continue
         for sub_topic, questions_dict in sub_topics.items():
             if sub_topic == intent:
-                lang_questions = questions_dict.get(lang, [])
-                if lang_questions:
-                    recommended_questions.append(random.choice(lang_questions))
-    
-    if not answers_list:
-        return "Not Found", "Sorry, we couldn't find an answer to your question.", []
+                continue
+            recommended_questions.append(random.choice(questions_dict.get(lang, [])))
     
     return main_topic, answers_list[0], recommended_questions
 
-exit_keywords = ["exit", "quit", "close"]
+# while True:
+#     question = input("Silakan masukkan pertanyaan Anda atau ketik 'exit' untuk keluar: ")
 
-while True:
-    question = input("Silakan masukkan pertanyaan Anda atau ketik 'exit' untuk keluar: ")
+#     # Keluar dari loop jika pengguna memasukkan kata kunci keluar
+#     if question.lower() in exit_keywords:
+#         print("Terima kasih telah menggunakan layanan kami.")
+#         break
+#     main_topic, answer, recommended_questions = get_answer(question)
+#     print("Main Topic:", main_topic)
+#     print("Answer:", answer)
+#     print("Recommended Questions:")
+#     for i, q in enumerate(recommended_questions, 1):
+#         print(f"{i}. {q}")
 
-    if question.lower() in exit_keywords:
-        print("Terima kasih telah menggunakan layanan kami.")
-        break
-    main_topic, answer, recommended_questions = get_answer(question)
-    print("Main Topic:", main_topic)
-    print("Answer:", answer)
-    print("Recommended Questions:")
-    for i, q in enumerate(recommended_questions, 1):
-        print(f"{i}. {q}")

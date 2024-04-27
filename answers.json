@@ -73,6 +73,18 @@
                 "Untuk menginstal plugin di WordPress, Anda dapat pergi ke bagian 'Plugin' di dasbor WordPress Anda, klik 'Tambah Baru', lalu cari plugin yang ingin Anda instal. Setelah Anda menemukannya, klik 'Instal Sekarang' dan kemudian 'Aktifkan' untuk mengaktifkan plugin di situs Anda."
             ]
         },
+        "productsServices": {
+            "en": [
+                "What products or services does your company offer?",
+                "Can you tell me about the products or services your company provides?",
+                "What are the main products or services of your company?"
+            ],
+            "id": [
+                "Produk atau layanan apa yang ditawarkan perusahaan Anda?",
+                "Bisakah Anda memberitahu saya tentang produk atau layanan yang perusahaan Anda sediakan?",
+                "Apa produk atau layanan utama dari perusahaan Anda?"
+            ]
+        },
         "theme": {
             "en": [
                 "A theme in WordPress is a collection of files that determine the look and feel of your website. Themes can be used to change the layout, color scheme, fonts, and other visual elements of your site.",

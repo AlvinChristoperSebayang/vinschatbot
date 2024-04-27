@@ -3,6 +3,7 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from langdetect import detect
 from nltk.classify import NaiveBayesClassifier
+from nltk.metrics import distance
 import random
 import json
 
@@ -24,6 +25,16 @@ def extract_features(text):
     for word in clean_text(text):
         features[word] = features.get(word, 0) + 1
     return features
+
+def get_best_matching_question(question, questions_list):
+    best_match = None
+    best_similarity = 0
+    for q in questions_list:
+        sim = distance.edit_distance(question, q)
+        if best_match is None or sim < best_similarity:
+            best_match = q
+            best_similarity = sim
+    return best_match, best_similarity
 
 training_data = []
 for main_topic, sub_topics in questions.items():
@@ -62,9 +73,14 @@ def get_answer(question_text):
                     recommended_questions.append(random.choice(lang_questions))
     
     if not answers_list:
-        return "Not Found", "Sorry, we couldn't find an answer to your question.", []
+        best_question, similarity = get_best_matching_question(question_text, [q for q in questions.get(main_topic, {}).get(intent, {}).get(lang, [])])
+        if similarity < 0.5:
+            return "Not Found", "Sorry, we couldn't find an answer to your question.", [], similarity
+        else:
+            return main_topic, f"Sorry, we couldn't find an exact answer to your question. Did you mean '{best_question}'?", [], similarity
     
-    return main_topic, answers_list[0], recommended_questions
+    return main_topic, answers_list[0], recommended_questions, None
+
 
 exit_keywords = ["exit", "quit", "close"]
 
@@ -74,9 +90,11 @@ while True:
     if question.lower() in exit_keywords:
         print("Terima kasih telah menggunakan layanan kami.")
         break
-    main_topic, answer, recommended_questions = get_answer(question)
+    main_topic, answer, recommended_questions, similarity = get_answer(question)
     print("Main Topic:", main_topic)
     print("Answer:", answer)
     print("Recommended Questions:")
     for i, q in enumerate(recommended_questions, 1):
         print(f"{i}. {q}")
+    if similarity is not None:
+        print("Similarity:", similarity)
