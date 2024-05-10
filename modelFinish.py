@@ -67,21 +67,25 @@ def get_answer(question_text):
 
     lang = detect_language(question_text)
     features = extract_features(question_text)
-    print('features:',features)
-    # Check if there are at least two words in common between the input question and the training data
+    print('features :', features)
     question_words = set(clean_text(question_text))
     training_words = set(word for data in training_data for word in clean_text(data[0]))
     common_words = question_words.intersection(training_words)
-       
-    if len(common_words) < 2:
-        if any(word in question_text.lower() for word in gratitude_words):
-            intent = "gratitude"
+    print('common_words :',common_words)
+
+    if len(common_words) < 1:
+        if not common_words:
+            if any(word in question_text.lower() for word in gratitude_words):
+                intent = "gratitude"
+            else:
+                intent = "notFound"
         else:
-            intent = "notFound"
-            print('intent :', intent)
+            intent = pipeline.predict([features])[0]
+
     else:
         intent = pipeline.predict([features])[0]
-        print('intent :', intent)
+
+
     
     main_topic = intent
     answers_list = answers.get(intent, {}).get(lang, [])
@@ -102,49 +106,17 @@ def get_answer(question_text):
 
     return main_topic, answers_list[0], recommended_questions
 
+exit_keywords = ["exit", "quit", "close"]
 
+while True:
+    question = input("Silakan masukkan pertanyaan Anda atau ketik 'exit' untuk keluar: ")
 
-# Test data
-test_data = [
-    ("What are your company's core values?", "visionAndMission", "en"),
-    ("What services do you offer?", "services", "en"),
-    ("Bagaimana budaya kerja di perusahaan Anda?", "cultureCompany", "id"),
-    ("Can you introduce me to your team?", "teamCompany", "en"),
-    ("Apa rencana masa depan perusahaan Anda?", "futureCompany", "id"),
-    ("hi, how are you doing?", "greetings", "en"),
-    ("how are you?", "greetings", "en"),
-    ("apa itu alvin sebayang", "notFound", "id"),
-    ("terimakasih", "gratitude", "id"),
-    ("terima kasih", "gratitude", "id"),
-    ("apa saja layanan yang anda miliki?", "services", "id"),
-    ("", "services", "id"),
-
-]
-# Print chat response
-print("\nChat Response:")
-for i, (text, _, _) in enumerate(test_data):
-    intent, answer, _ = get_answer(text)
-    print(f"User: {text}")
-    print(f"Bot: {answer}")
-    print()
-
-# # Function to get actual labels from test data
-# # Function to get actual labels from test data
-# def get_actual_labels(test_data):
-#     return [label for _, label, _ in test_data]
-
-# # # Prepare actual labels
-# actual_labels = get_actual_labels(test_data)
-# # # Predict labels using get_answer function
-# predicted_labels = [get_answer(text)[0] for text, _, _ in test_data]
-
-# # # Compute confusion matrix
-# conf_matrix = confusion_matrix(actual_labels, predicted_labels)
-# print("Confusion Matrix:")
-# print(conf_matrix)
-# print('predict',predicted_labels)
-# print('actual',actual_labels)
-# # Calculate accuracy
-# accuracy = accuracy_score(actual_labels, predicted_labels)
-# print(f"Accuracy: {accuracy * 100:.2f}%")
-
+    if question.lower() in exit_keywords:
+        print("Terima kasih telah menggunakan layanan kami.")
+        break
+    main_topic, answer, recommended_questions = get_answer(question)
+    print("Main Topic:", main_topic)
+    print("Answer:", answer)
+    print("Recommended Questions:")
+    for i, q in enumerate(recommended_questions, 1):
+        print(f"{i}. {q}")

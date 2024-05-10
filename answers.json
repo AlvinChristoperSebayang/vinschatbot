@@ -104,5 +104,136 @@
                 "Dalam WordPress, postingan adalah entri yang terdaftar dalam urutan kronologis terbalik di blog atau situs web Anda. Mereka biasanya digunakan untuk pembaruan berita, artikel blog, dan konten lainnya yang bersifat waktu.",
                 "Halaman, di sisi lain, adalah konten statis dan mandiri yang tidak terdaftar berdasarkan tanggal. Mereka sering digunakan untuk halaman statis seperti 'Tentang Kami', 'Kontak', atau 'Layanan'."
             ]
+        },
+        "services":{
+            "en": [
+                "Mangcoding offers a range of services including WordPress theme development, Shopify theme development, custom website application development, user interface (UI) and user experience (UX) design, and custom plugin development.",
+                "At Mangcoding, we provide a variety of services, including WordPress theme development, Shopify theme development, custom website application development, user interface (UI) and user experience (UX) design, and custom plugin development.",
+                "Mangcoding offers a wide range of services, including but not limited to WordPress theme development, Shopify theme development, custom website application development, user interface (UI) and user experience (UX) design, and custom plugin development.",
+                "From WordPress theme development to Shopify theme development, custom website application development, user interface (UI) and user experience (UX) design, and custom plugin development, Mangcoding has the expertise to meet your needs.",
+                "Looking for services such as WordPress theme development, Shopify theme development, custom website application development, user interface (UI) and user experience (UX) design, or custom plugin development? Mangcoding has you covered."
+              ],
+              "id": [
+                "Mangcoding menawarkan berbagai layanan termasuk pengembangan tema WordPress, pengembangan tema Shopify, pengembangan aplikasi website kustom, desain antarmuka pengguna (UI) dan pengalaman pengguna (UX), serta pengembangan plugin kustom.",
+                "Di Mangcoding, kami menyediakan beragam layanan, termasuk pengembangan tema WordPress, pengembangan tema Shopify, pengembangan aplikasi website kustom, desain antarmuka pengguna (UI) dan pengalaman pengguna (UX), serta pengembangan plugin kustom.",
+                "Mangcoding menawarkan berbagai layanan, mulai dari pengembangan tema WordPress hingga pengembangan tema Shopify, pengembangan aplikasi website kustom, desain antarmuka pengguna (UI) dan pengalaman pengguna (UX), serta pengembangan plugin kustom.",
+                "Dari pengembangan tema WordPress hingga pengembangan tema Shopify, pengembangan aplikasi website kustom, desain antarmuka pengguna (UI) dan pengalaman pengguna (UX), serta pengembangan plugin kustom, Mangcoding memiliki keahlian untuk memenuhi kebutuhan Anda.",
+                "Butuh layanan seperti pengembangan tema WordPress, pengembangan tema Shopify, pengembangan aplikasi website kustom, desain antarmuka pengguna (UI) dan pengalaman pengguna (UX), atau pengembangan plugin kustom? Mangcoding siap membantu."
+              ]
+        },
+        "greetings":{
+            "en": [
+                "Hello! How can I assist you today?",
+                "Hi there! How can I help you?",
+                "Hey! What can I do for you?",
+                "Howdy! What brings you here?",
+                "Hi! How's your day going?"
+            ],
+            "id": [
+                "Halo! Bagaimana saya bisa membantu Anda hari ini?",
+                "Hai! Ada yang bisa saya bantu?",
+                "Hei! Apa yang bisa saya lakukan untuk Anda?",
+                "Halo! Ada yang bisa saya bantu?",
+                "Hai! Bagaimana kabarmu hari ini?"
+            ]
+        },   
+        "farewells":{
+            "en": [
+                "Goodbye! Have a great day.",
+                "See you later!",
+                "Take care!",
+                "So long!",
+                "Bye! Come back soon."
+            ],
+            "id": [
+                "Selamat tinggal! Semoga hari Anda menyenangkan.",
+                "Sampai jumpa!",
+                "Salam!",
+                "Dada!",
+                "Sampai jumpa! Datang kembali ya."
+            ]
+        },
+        "gratitude":{
+            "en": [
+                "Thank you!",
+                "Thanks a lot!",
+                "Thank you very much!",
+                "Thanks for your help.",
+                "Much appreciated!"
+            ],
+            "id": [
+                "Terima kasih!",
+                "Makasih banyak!",
+                "Terima kasih banyak!",
+                "Terima kasih atas bantuannya.",
+                "Sangat dihargai!"
+            ]
+        },
+        "name":{
+            "en": [
+                "My name is Mangcoding AI.",
+                "I am Mangcoding AI, your assistant."
+            ],
+            "id": [
+                "Nama saya Mangcoding AI.",
+                "Saya adalah Mangcoding AI, asisten Anda."
+            ]
+        },
+        "how_are_you":{
+            "en": [
+                "I'm fine, thank you. How about you?",
+                "I'm doing well, thank you.",
+                "I'm good, thanks. How are you?",
+                "I'm okay. How about yourself?",
+                "I'm well, thanks. How are you doing?"
+            ],
+            "id": [
+                "Saya baik, terima kasih. Bagaimana denganmu?",
+                "Saya baik-baik saja, terima kasih.",
+                "Saya baik, terima kasih. Bagaimana kabarmu?",
+                "Saya baik. Bagaimana denganmu?",
+                "Saya baik, terima kasih. Bagaimana kabarmu?"
+            ]
+        },
+        "good_to_hear":{
+            "en": [
+                "I'm glad to hear that. I've been doing well too.",
+                "That's great to hear! I've been good as well.",
+                "I'm happy to hear that. I've been doing well too.",
+                "That's awesome! I've been great as well.",
+                "I'm pleased to hear that. I've been good too."
+            ],
+            "id": [
+                "Saya senang mendengarnya. Saya juga baik-baik saja.",
+                "Senang mendengarnya! Saya juga baik.",
+                "Saya bahagia mendengarnya. Saya juga baik-baik saja.",
+                "Bagus sekali! Saya juga baik.",
+                "Saya senang mendengarnya. Saya juga baik."
+            ]
+        },
+        "well_wishes":{
+            "en": [
+                "Thank you!",
+                "Thanks!",
+                "Have a great day!",
+                "Good luck with that!",
+                "Wishing you all the best!"
+            ],
+            "id": [
+                "Terima kasih!",
+                "Terima kasih!",
+                "Semoga harimu menyenangkan!",
+                "Semoga sukses dengan itu!",
+                "Semoga sukses untukmu!"
+            ]
+        },
+        "notFound" :{
+            "en": [
+               "Sorry, we couldn't find an answer to your question. Is there any other question we can help answer?"
+            ],
+            "id": [
+               "Maaf, kami tidak dapat menemukan jawaban untuk pertanyaan Anda. Apakah ada pertanyaan lain yang dapat kami bantu jawab?"
+            ]
         }
+         
     }    

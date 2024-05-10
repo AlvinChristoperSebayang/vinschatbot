@@ -1,132 +1,176 @@
 {
     "company": {
-    "historyCompany": {
-        "en": [
-            "What is the history of your company?",
-            "Can you tell me about your history company?",
-            "Let me know about your history company?"
-        ],
-        "id": [
-            "Apa sejarah perusahaan Anda?",
-            "Bisakah anda katakan pada saya mengenai sejarah perusahaan Anda?",
-            "Biarkan saya mengetahui mengenai sejarah perusahaan Anda?"
-        ]
-    },
-    "visionAndMission": {
-        "en": [
-            "What is your company's vision and mission?",
-            "What is your company's vision?",
-            "What is your company's mission?",
-            "Can you tell me about your company's vision and mission?",
-            "What are the core values of your company?"
-        ],
-        "id": [
-            "Apa visi dan misi perusahaan Anda?",
-            "Bisakah Anda memberitahu saya tentang visi dan misi perusahaan Anda?",
-            "Apa nilai inti dari perusahaan Anda?"
-        ]
-    },
-    "cultureCompany": {
-        "en": [
-            "Can you describe the culture at your company?",
-            "What is the work culture like at your company?",
-            "How would you define the culture of your company?"
-        ],
-        "id": [
-            "Bisakah Anda mendeskripsikan budaya di perusahaan Anda?",
-            "Bagaimana budaya kerja di perusahaan Anda?",
-            "Bagaimana Anda mendefinisikan budaya perusahaan Anda?"
-        ]
-    },
-    "productsServices": {
-        "en": [
-            "What products or services does your company offer?",
-            "Can you tell me about the products or services your company provides?",
-            "What are the main products or services of your company?"
-        ],
-        "id": [
-            "Produk atau layanan apa yang ditawarkan perusahaan Anda?",
-            "Bisakah Anda memberitahu saya tentang produk atau layanan yang perusahaan Anda sediakan?",
-            "Apa produk atau layanan utama dari perusahaan Anda?"
-        ]
-    },
-    "teamCompany": {
-        "en": [
-            "Can you introduce me to your team?",
-            "Who are the key members of your team?",
-            "Tell me about the people who work at your company."
-        ],
-        "id": [
-            "Bisakah Anda memperkenalkan saya kepada tim Anda?",
-            "Siapa saja anggota kunci tim Anda?",
-            "Ceritakan tentang orang-orang yang bekerja di perusahaan Anda."
-        ]
-    }, 
-    "futureCompany": {
-        "en": [
-            "What are your company's future plans?",
-            "How does your company plan to grow in the future?",
-            "What upcoming projects does your company have?",
-            "How does your company aim to innovate in the future?",
-            "What are your company's goals for the future?"
-        ],
-        "id": [
-            "Apa rencana masa depan perusahaan Anda?",
-            "Bagaimana perusahaan Anda berencana untuk berkembang di masa depan?",
-            "Proyek apa yang akan datang bagi perusahaan Anda?",
-            "Bagaimana perusahaan Anda bertujuan untuk berinovasi di masa depan?",
-            "Apa tujuan perusahaan Anda untuk masa depan?"
-        ]
-    }
-},
-    "wordpress": {
-        "aboutWordpress": {
+        "historyCompany": {
             "en": [
-                "What is the meaning of WordPress?",
-                "What is the purpose of WordPress?",
-                "How do you create a website with WordPress?"
+                "What is the history of your company?",
+                "Can you tell me about your history company?",
+                "Let me know about your history company?"
             ],
             "id": [
-                "Apa yang dimaksud WordPress?",
-                "Apa tujuan dari WordPress?",
-                "Bagaimana cara membuat situs web dengan WordPress?"
+                "Apa sejarah perusahaan Anda?",
+                "Bisakah anda katakan pada saya mengenai sejarah perusahaan Anda?",
+                "Biarkan saya mengetahui mengenai sejarah perusahaan Anda?",
+                "Kapan mangcoding berdiri",
+                "Kapan mangcoding dibentuk",
+                "Kapan mangcoding ada"
             ]
         },
-        "plugin": {
+        "visionAndMission": {
             "en": [
-                "What is a plugin in WordPress?",
-                "How do you install a plugin in WordPress?",
-                "Can you recommend some essential plugins for WordPress?"
+                "What is your company's vision and mission?",
+                "What is your company's vision?",
+                "What is your company's mission?",
+                "Can you tell me about your company's vision and mission?",
+                "What are the core values of your company?",
+                "What is your purposes"
             ],
             "id": [
-                "Apa itu plugin dalam WordPress?",
-                "Bagaimana cara menginstal plugin di WordPress?",
-                "Dapatkah Anda merekomendasikan beberapa plugin penting untuk WordPress?"
+                "Apa visi dan misi perusahaan Anda?",
+                "Bisakah Anda memberitahu saya tentang visi dan misi perusahaan Anda?",
+                "Apa nilai inti dari perusahaan Anda?",
+                "visi",
+                "misi",
+                "apa tujuan anda"
             ]
         },
-        "theme": {
+        "cultureCompany": {
             "en": [
-                "What is a theme in WordPress?",
-                "How do you install a theme in WordPress?",
-                "Can you recommend some popular themes for WordPress?"
+                "Can you describe the culture at your company?",
+                "What is the work culture like at your company?",
+                "How would you define the culture of your company?"
             ],
             "id": [
-                "Apa itu tema dalam WordPress?",
-                "Bagaimana cara menginstal tema di WordPress?",
-                "Dapatkah Anda merekomendasikan beberapa tema populer untuk WordPress?"
+                "Bisakah Anda mendeskripsikan budaya di perusahaan Anda?",
+                "Bagaimana budaya kerja di perusahaan Anda?",
+                "Bagaimana Anda mendefinisikan budaya perusahaan Anda?"
             ]
         },
-        "postPage": {
+        "productsServices": {
             "en": [
-                "What are posts and pages in WordPress?",
-                "How do you create a new post or page in WordPress?",
-                "Can you explain the difference between a post and a page in WordPress?"
+                "What products or services does your company offer?",
+                "Can you tell me about the products or services your company provides?",
+                "What are the main products or services of your company?"
             ],
             "id": [
-                "Apa itu posting dan halaman di WordPress?",
-                "Bagaimana cara membuat posting atau halaman baru di WordPress?",
-                "Dapatkah Anda menjelaskan perbedaan antara posting dan halaman di WordPress?"
+                "Produk atau layanan apa yang ditawarkan perusahaan Anda?",
+                "Bisakah Anda memberitahu saya tentang produk atau layanan yang perusahaan Anda sediakan?",
+                "Apa produk atau layanan utama dari perusahaan Anda?"
+            ]
+        },
+        "teamCompany": {
+            "en": [
+                "Can you introduce me to your team?",
+                "Who are the key members of your team?",
+                "Tell me about the people who work at your company."
+            ],
+            "id": [
+                "Bisakah Anda memperkenalkan saya kepada tim Anda?",
+                "Siapa saja anggota kunci tim Anda?",
+                "Ceritakan tentang orang-orang yang bekerja di perusahaan Anda."
+            ]
+        },
+        "futureCompany": {
+            "en": [
+                "What are your company's future plans?",
+                "How does your company plan to grow in the future?",
+                "What upcoming projects does your company have?",
+                "How does your company aim to innovate in the future?",
+                "What are your company's goals for the future?"
+            ],
+            "id": [
+                "Apa rencana masa depan perusahaan Anda?",
+                "Bagaimana perusahaan Anda berencana untuk berkembang di masa depan?",
+                "Proyek apa yang akan datang bagi perusahaan Anda?",
+                "Bagaimana perusahaan Anda bertujuan untuk berinovasi di masa depan?",
+                "Apa tujuan perusahaan Anda untuk masa depan?"
+            ]
+        },
+        "services": {
+            "en": [
+                "What services do you offer?",
+                "Can you explain more about the services you provide?",
+                "Are your services available online?",
+                "What sets your services apart from others in the industry?",
+                "Are there any additional fees for your services?",
+                "what is your services"
+            ],
+            "id": [
+                "Apa saja layanan yang Anda tawarkan?",
+                "Bisakah Anda menjelaskan lebih lanjut tentang layanan yang Anda sediakan?",
+                "Bagaimana layanan Anda dapat memberikan manfaat bagi saya?",
+                "Apakah layanan Anda tersedia secara online?",
+                "Apakah saya bisa menyesuaikan layanan sesuai kebutuhan saya?",
+                "Apakah ada biaya tambahan untuk layanan Anda?",
+                "Bagaimana cara saya mengakses layanan Anda?",
+                "Apa layanan anda"
+            ]
+        },
+        
+    "conversation": {
+        "greetings": {
+            "en": [
+                "hi",
+                "hello",
+                "hey",
+                "howdy",
+                "hi there",
+                "how are you doing?",
+                "hello there",
+                "how are you?"
+            ],
+            "id": [
+                "apa kabarmu hari ini?",
+                "apa kabar?",
+                "hi"
             ]
         }
-}
+    },
+        "farewells": {
+            "en": [
+                "bye",
+                "goodbye",
+                "see you later",
+                "take care",
+                "so long"
+            ],
+            "id": [
+                "selamat tinggal",
+                "sampai jumpa",
+                "dada",
+                "salam"
+            ]
+        },
+        "gratitude": {
+            "en": [
+                "thank you",
+                "thanks",
+                "thanks a lot",
+                "thank you very much",
+                "much appreciated"
+            ],
+            "id": [
+                "terima kasih",
+                "makasih",
+                "terimakasih",
+                "trimakasih banyak",
+                "trimakasih banyak sekali"
+            ]
+        },
+            "name": {
+                "en": ["what is your name", "who are you"],
+                "id": ["siapa namamu", "siapa kamu?"]
+            },
+            "how_are_you": {
+                "en": ["i'm fine. how about yourself?", "i'm doing well, and you?"],
+                "id": ["saya baik. bagaimana denganmu?", "saya baik-baik saja, kamu sendiri?"]
+            },
+            "good_to_hear": {
+                "en": ["i've been great. what about you?", "never better, thanks."],
+                "id": ["saya baik-baik saja. bagaimana denganmu?", "tidak pernah lebih baik, terima kasih."]
+            },
+            "well_wishes": {
+                "en": ["good luck with that.", "thanks."],
+                "id": ["semoga sukses dengan itu.", "terima kasih."]
+            }
+    }
 }

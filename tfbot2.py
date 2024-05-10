@@ -1,22 +1,42 @@
-from nltk.tokenize import word_tokenize
+import nltk
 from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
+from nltk.stem import WordNetLemmatizer, PorterStemmer
 from langdetect import detect
 from nltk.classify import NaiveBayesClassifier
 import random
 import json
+import string
+import pandas as pd
 
 with open('questions.json', 'r') as file:
     questions = json.load(file)
 with open('answers.json', 'r') as file:
     answers = json.load(file)
 
+def remove_stopwords(text):
+    stopwords_list = set(stopwords.words('english') + stopwords.words('indonesian'))
+    output = [i for i in text if i not in stopwords_list]
+    return output
+
+def stemming(text):
+    porter_stemmer = PorterStemmer()
+    stem_text = [porter_stemmer.stem(word) for word in text]
+    return stem_text
+
+def lemmatizer(text):
+    wordnet_lemmatizer = WordNetLemmatizer()
+    lemm_text = [wordnet_lemmatizer.lemmatize(word) for word in text]
+    return lemm_text
+
+def remove_punctuation(text):
+    punctuationfree = "".join([i for i in text if i not in string.punctuation])
+    return punctuationfree
+
 def clean_text(text):
-    tokens = word_tokenize(text.lower())
-    stop_words = set(stopwords.words('english') + stopwords.words('indonesian'))
-    filtered_tokens = [word for word in tokens if word.isalnum() and word not in stop_words]
-    lemmatizer = WordNetLemmatizer()
-    lemmatized_tokens = [lemmatizer.lemmatize(token) for token in filtered_tokens]
+    text = remove_punctuation(text)
+    tokens = nltk.word_tokenize(text.lower())
+    filtered_tokens = [word for word in tokens if word.isalnum()]
+    lemmatized_tokens = lemmatizer(filtered_tokens)
     return lemmatized_tokens
 
 def extract_features(text):
@@ -44,10 +64,6 @@ def detect_language(text):
     return lang
 
 def get_answer(question_text):
-    # Check for greetings
-    if any(word in question_text.lower() for word in ["hi", "hello", "hey", "halo", "hai"]):
-        return "greetings", "Hello! How can I assist you today?", []
-
     lang = detect_language(question_text)
     features = extract_features(question_text)
     intent = classifier.classify(features)
@@ -66,10 +82,9 @@ def get_answer(question_text):
                     recommended_questions.append(random.choice(lang_questions))
     
     if not answers_list:
-        return "notFound", "Sorry, we couldn't find an answer to your question.", []
+        return "Not Found", "Sorry, we couldn't find an answer to your question.", []
     
     return main_topic, answers_list[0], recommended_questions
-
 
 exit_keywords = ["exit", "quit", "close"]
 

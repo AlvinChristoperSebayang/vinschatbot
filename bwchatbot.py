@@ -2,12 +2,10 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from langdetect import detect
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.pipeline import make_pipeline
-from sklearn.metrics import confusion_matrix, accuracy_score
+from nltk.classify import NaiveBayesClassifier
 import random
 import json
+from collections import Counter
 
 # Load questions and answers from JSON files
 with open('questions.json', 'r') as file:
@@ -24,24 +22,36 @@ def clean_text(text):
     lemmatized_tokens = [lemmatizer.lemmatize(token) for token in filtered_tokens]
     return lemmatized_tokens
 
-# Function to extract features
-def extract_features(text):
-    return ' '.join(clean_text(text))
+# Function to extract bag of words features
+def extract_features(text, vocabulary):
+    tokens = clean_text(text)
+    features = Counter(tokens)
+    # Bag of Words representation
+    bow = [features[word] if word in features else 0 for word in vocabulary]
+    return bow
 
-# Prepare training data
+# Build vocabulary
+all_words = []
+for main_topic, sub_topics in questions.items():
+    for sub_topic, questions_dict in sub_topics.items():
+        for lang, question_list in questions_dict.items():
+            for question in question_list:
+                all_words.extend(clean_text(question))
+
+vocabulary = set(all_words)
+
+# Build training data
 training_data = []
 for main_topic, sub_topics in questions.items():
     for sub_topic, questions_dict in sub_topics.items():
         for lang, question_list in questions_dict.items():
             for question in question_list:
-                features = extract_features(question)
-                training_data.append((features, sub_topic))
+                features = extract_features(question, vocabulary)
+                features.append(main_topic)  # Add topic as a feature
+                training_data.append((dict(zip(vocabulary, features[:-1])), sub_topic))
 
-# Create a pipeline with TfidfVectorizer and MultinomialNB
-pipeline = make_pipeline(TfidfVectorizer(), MultinomialNB())
-
-# Train the pipeline
-pipeline.fit([data[0] for data in training_data], [data[1] for data in training_data])
+# Classifier training
+classifier = NaiveBayesClassifier.train(training_data)
 
 # Function to detect language of text
 def detect_language(text):
@@ -51,19 +61,15 @@ def detect_language(text):
         lang = 'en'
     return lang
 
-# Function to get answer for a question
+# Function to get answer to a question
 def get_answer(question_text):
-    # Check for greetings
-    if any(word in question_text.lower() for word in ["hi", "hello", "hey", "halo", "hai"]):
-        return "greetings", "Hello! How can I assist you today?", []
-
     lang = detect_language(question_text)
-    features = extract_features(question_text)
-    intent = pipeline.predict([features])[0]
+    features = extract_features(question_text, vocabulary)
+    intent = classifier.classify(dict(zip(vocabulary, features)))
     main_topic = intent
     answers_list = answers.get(intent, {}).get(lang, [])
     random.shuffle(answers_list)
-
+    
     recommended_questions = []
     for topic, sub_topics in questions.items():
         if topic == main_topic:
@@ -73,28 +79,24 @@ def get_answer(question_text):
                 lang_questions = questions_dict.get(lang, [])
                 if lang_questions:
                     recommended_questions.append(random.choice(lang_questions))
-
-    # Check similarity with training questions
-    for data in training_data:
-        if len(set(question_text.split()).intersection(set(data[0].split()))) < 2:
-            return "notFound", "Sorry, we couldn't find an answer to your question.", []
-
+    
+    if not answers_list:
+        return "Not Found", "Sorry, we couldn't find an answer to your question.", []
+    
     return main_topic, answers_list[0], recommended_questions
 
-# Chat loop
+# Main loop
+exit_keywords = ["exit", "quit", "close"]
+
 while True:
-    user_input = input("You: ")
+    question = input("Silakan masukkan pertanyaan Anda atau ketik 'exit' untuk keluar: ")
 
-    if user_input.lower() == 'exit':
-        print("Goodbye!")
+    if question.lower() in exit_keywords:
+        print("Terima kasih telah menggunakan layanan kami.")
         break
-
-    main_topic, answer, recommended_questions = get_answer(user_input)
-    print(f"Chatbot: {answer}")
-
-    if recommended_questions:
-        print("You might also be interested in these related questions:")
-        for i, q in enumerate(recommended_questions, 1):
-            print(f"{i}. {q}")
-
-    print()
+    main_topic, answer, recommended_questions = get_answer(question)
+    print("Main Topic:", main_topic)
+    print("Answer:", answer)
+    print("Recommended Questions:")
+    for i, q in enumerate(recommended_questions, 1):
+        print(f"{i}. {q}")
