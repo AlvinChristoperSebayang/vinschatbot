@@ -20,7 +20,7 @@ with open('answers.json', 'r') as file:
 
 custom_stopword = {
     'how', 'can', 'your', 'are', 'the', 'is', 'of', 'and', 'to', 'in', 'hi', 'hello', 'hey', 'halo', 'hai', 'apa kabar',
-    'how are you', 'how is it going', 'terimakasih', 'thanks', 'thank you', 'dada', 'bye', 'goodbye', 'hi', 'hello', 
+    'how are you', 'how is it going', 'terimakasih', 'thanks', 'thank you', 'dada', 'bye', 'good bye', 'hi', 'hello', 
     'halo', 'hai', 'selamat pagi', 'selamat siang', 'selamat sore', 'selamat malam', 'tentang', 'about',   "bye","goodbye", "see you later","take care","dada"
 }
 
@@ -97,66 +97,18 @@ def get_answer(question_text):
 
     return main_topic, answers_list[0], recommended_questions
 
+exit_keywords = ["exit", "quit", "close"]
 
-# Test data
-test_data = [
-    ("What are your company's core values?", "visionAndMission"),
-    ("How can I access your services?", "services"),
-    ("Can you introduce me to your team?", "teamCompany"),
-    ("Apa rencana masa depan perusahaan Anda?", "futureCompany"),
-    ("thank you friend", "gratitude"),
-    ("jelaskan mengenai mangcoding", "aboutMangcoding"),
-    ("jelaskan mengenai sayur mayur", "notFound"),
-    ("what is your services", "services"),
-    ("jelaskan sejarah perusahaan anda?" , "historyCompany"),
-    ("tell me about your company history" , "historyCompany"),
-    ( "What is the history of your company?", "historyCompany"),
-    (  "apa yang menjadi visi perusahaan anda", "visionAndMission"),
-    ( "apa yang menjadi misi perusahaan anda", "visionAndMission")
-]
-# Get predicted labels using get_answer function
-predicted_labels = [get_answer(text)[0] for text, _ in test_data]
+while True:
+    question = input("Silakan masukkan pertanyaan Anda atau ketik 'exit' untuk keluar: ")
 
-# Prepare actual labels
-actual_labels = [label for _, label in test_data]
+    if question.lower() in exit_keywords:
+        print("Terima kasih telah menggunakan layanan kami.")
+        break
+    main_topic, answer, recommended_questions = get_answer(question)
+    print("Main Topic:", main_topic)
+    print("Answer:", answer)
+    print("Recommended Questions:")
+    for i, q in enumerate(recommended_questions, 1):
+        print(f"{i}. {q}")
 
-# Print actual and predicted labels
-print("Actual vs Predicted:")
-for i, (text, actual_label) in enumerate(test_data):
-    print(f"{i+1}. Text: {text} | Actual: {actual_label} | Predicted: {predicted_labels[i]}")
-
-# Compute confusion matrix for test data
-conf_matrix = confusion_matrix(actual_labels, predicted_labels)
-print("\nConfusion Matrix:")
-print(conf_matrix)
-
-# Calculate accuracy for test data
-accuracy = accuracy_score(actual_labels, predicted_labels)
-print(f"Accuracy: {accuracy * 100:.2f}%")
-
-# Split the training data into features and labels
-features_training = [data[0] for data in training_data]
-labels_training = [data[1] for data in training_data]
-
-# Use the best pipeline to predict labels for the training data
-predicted_labels_training = best_pipeline.predict(features_training)
-
-# Compute confusion matrix for training data
-conf_matrix_training = confusion_matrix(labels_training, predicted_labels_training)
-
-# Calculate accuracy for training data
-accuracy_training = accuracy_score(labels_training, predicted_labels_training)
-
-# Print actual vs predicted labels for training data
-print("\nActual vs Predicted (Training Data):")
-for i, (features, actual_label) in enumerate(zip(features_training, labels_training)):
-    predicted_label = predicted_labels_training[i]
-    print(f"{i+1}. Features: {features} | Actual: {actual_label} | Predicted: {predicted_label}")
-
-# Display the confusion matrix for training data using seaborn
-plt.figure(figsize=(12, 10))
-sns.heatmap(conf_matrix_training, annot=True, fmt="d", cmap="Blues", xticklabels=best_pipeline.classes_, yticklabels=best_pipeline.classes_)
-plt.xlabel("Predicted Labels")
-plt.ylabel("True Labels")
-plt.title(f"Confusion Matrix - Training Data (Accuracy: {accuracy_training * 100:.2f}%)")
-plt.show()

@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from chatbot import get_answer
+from chatbotV2 import get_answer
 
 app = Flask(__name__)
 CORS(app)  # Tambahkan ini untuk mengaktifkan CORS

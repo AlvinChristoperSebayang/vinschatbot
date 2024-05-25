@@ -7,8 +7,6 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import make_pipeline
 from sklearn.metrics import confusion_matrix, accuracy_score
 from sklearn.model_selection import GridSearchCV
-import matplotlib.pyplot as plt
-import seaborn as sns
 import random
 import json
 
@@ -97,7 +95,6 @@ def get_answer(question_text):
 
     return main_topic, answers_list[0], recommended_questions
 
-
 # Test data
 test_data = [
     ("What are your company's core values?", "visionAndMission"),
@@ -111,52 +108,51 @@ test_data = [
     ("jelaskan sejarah perusahaan anda?" , "historyCompany"),
     ("tell me about your company history" , "historyCompany"),
     ( "What is the history of your company?", "historyCompany"),
-    (  "apa yang menjadi visi perusahaan anda", "visionAndMission"),
-    ( "apa yang menjadi misi perusahaan anda", "visionAndMission")
+    ( "apa yang menjadi misi perusahaan anda", "visionAndMission"),
+    ( "Apa visi dan misi perusahaan Anda?", "visionAndMission"),
+    ( "bye", "visionAndMission"),
+    ( "", "visionAndMission"),
+    ( "jelaskan visi dan misi perusahaan anda?", "visionAndMission"),
+
 ]
+
 # Get predicted labels using get_answer function
-predicted_labels = [get_answer(text)[0] for text, _ in test_data]
+predicted_labels = [get_answer(text)[0] for text, _ in training_data]
 
 # Prepare actual labels
-actual_labels = [label for _, label in test_data]
+actual_labels = [label for _, label in training_data]
 
 # Print actual and predicted labels
 print("Actual vs Predicted:")
-for i, (text, actual_label) in enumerate(test_data):
+for i, (text, actual_label) in enumerate(training_data):
     print(f"{i+1}. Text: {text} | Actual: {actual_label} | Predicted: {predicted_labels[i]}")
 
-# Compute confusion matrix for test data
+# Compute confusion matrix
 conf_matrix = confusion_matrix(actual_labels, predicted_labels)
 print("\nConfusion Matrix:")
 print(conf_matrix)
 
-# Calculate accuracy for test data
+# Calculate accuracy
 accuracy = accuracy_score(actual_labels, predicted_labels)
 print(f"Accuracy: {accuracy * 100:.2f}%")
 
-# Split the training data into features and labels
-features_training = [data[0] for data in training_data]
-labels_training = [data[1] for data in training_data]
 
-# Use the best pipeline to predict labels for the training data
-predicted_labels_training = best_pipeline.predict(features_training)
+# # Get predicted labels for training data using get_answer function
+# predicted_labels_train = [get_answer(text)[0] for text, _ in training_data]
 
-# Compute confusion matrix for training data
-conf_matrix_training = confusion_matrix(labels_training, predicted_labels_training)
+# # Prepare actual labels for training data
+# actual_labels_train = [label for _, label in training_data]
 
-# Calculate accuracy for training data
-accuracy_training = accuracy_score(labels_training, predicted_labels_training)
+# # Compute confusion matrix for training data
+# conf_matrix_train = confusion_matrix(actual_labels_train, predicted_labels_train)
+# print("\nConfusion Matrix (Training Data):")
+# print(conf_matrix_train)
 
-# Print actual vs predicted labels for training data
-print("\nActual vs Predicted (Training Data):")
-for i, (features, actual_label) in enumerate(zip(features_training, labels_training)):
-    predicted_label = predicted_labels_training[i]
-    print(f"{i+1}. Features: {features} | Actual: {actual_label} | Predicted: {predicted_label}")
+# # Calculate accuracy for training data
+# accuracy_train = accuracy_score(actual_labels_train, predicted_labels_train)
+# print(f"Accuracy (Training Data): {accuracy_train * 100:.2f}%")
 
-# Display the confusion matrix for training data using seaborn
-plt.figure(figsize=(12, 10))
-sns.heatmap(conf_matrix_training, annot=True, fmt="d", cmap="Blues", xticklabels=best_pipeline.classes_, yticklabels=best_pipeline.classes_)
-plt.xlabel("Predicted Labels")
-plt.ylabel("True Labels")
-plt.title(f"Confusion Matrix - Training Data (Accuracy: {accuracy_training * 100:.2f}%)")
-plt.show()
+# # Print actual and predicted labels for training data
+# print("\nActual vs Predicted (Training Data):")
+# for i, (_, actual_label) in enumerate(training_data):
+#     print(f"{i+1}. Actual: {actual_label} | Predicted: {predicted_labels_train[i]}")

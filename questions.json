@@ -1,5 +1,18 @@
 {
     "company": {
+        "aboutMangcoding" :{
+            "en": [
+                "can you tell me about mangcoding",
+                "tell me about mangcoding",
+                "introduce me about mangcoding"
+            ],
+            "id": [
+                "jelaskan kepada saya tentang perusahaan mangcoding",
+                "bisakah anda jelaskan tentang perusahaan mangcoding",
+                "jelaskan pada saya tentang perusahaan mangcoding",
+                "perkenalkan mangcoding pada saya"
+            ]
+        },
         "historyCompany": {
             "en": [
                 "What is the history of your company?",
@@ -11,10 +24,10 @@
                 "Bisakah anda katakan pada saya mengenai sejarah perusahaan Anda?",
                 "Biarkan saya mengetahui mengenai sejarah perusahaan Anda?",
                 "Kapan mangcoding berdiri",
-                "Kapan mangcoding dibentuk",
-                "Kapan mangcoding ada"
+                "Kapan mangcoding dibentuk atau didirikan"
             ]
         },
+
         "visionAndMission": {
             "en": [
                 "What is your company's vision and mission?",
@@ -22,39 +35,15 @@
                 "What is your company's mission?",
                 "Can you tell me about your company's vision and mission?",
                 "What are the core values of your company?",
-                "What is your purposes"
+                "What is your company purposes"
             ],
             "id": [
                 "Apa visi dan misi perusahaan Anda?",
+                "jelaskan visi dan misi perusahaan anda?",
+                "apa yang menjadi visi perusahaan anda",
+                "apa yang menjadi misi perusahaan anda",
                 "Bisakah Anda memberitahu saya tentang visi dan misi perusahaan Anda?",
-                "Apa nilai inti dari perusahaan Anda?",
-                "visi",
-                "misi",
-                "apa tujuan anda"
-            ]
-        },
-        "cultureCompany": {
-            "en": [
-                "Can you describe the culture at your company?",
-                "What is the work culture like at your company?",
-                "How would you define the culture of your company?"
-            ],
-            "id": [
-                "Bisakah Anda mendeskripsikan budaya di perusahaan Anda?",
-                "Bagaimana budaya kerja di perusahaan Anda?",
-                "Bagaimana Anda mendefinisikan budaya perusahaan Anda?"
-            ]
-        },
-        "productsServices": {
-            "en": [
-                "What products or services does your company offer?",
-                "Can you tell me about the products or services your company provides?",
-                "What are the main products or services of your company?"
-            ],
-            "id": [
-                "Produk atau layanan apa yang ditawarkan perusahaan Anda?",
-                "Bisakah Anda memberitahu saya tentang produk atau layanan yang perusahaan Anda sediakan?",
-                "Apa produk atau layanan utama dari perusahaan Anda?"
+                "Apa nilai inti dari perusahaan Anda?"
             ]
         },
         "teamCompany": {
@@ -89,9 +78,12 @@
             "en": [
                 "What services do you offer?",
                 "Can you explain more about the services you provide?",
-                "Are your services available online?",
+                "Are your services company that available online?",
                 "What sets your services apart from others in the industry?",
                 "Are there any additional fees for your services?",
+                "What products or services does your company offer?",
+                "Can you tell me about the products or services your company provides?",
+                "What are the main products or services of your company?",
                 "what is your services"
             ],
             "id": [
@@ -102,42 +94,39 @@
                 "Apakah saya bisa menyesuaikan layanan sesuai kebutuhan saya?",
                 "Apakah ada biaya tambahan untuk layanan Anda?",
                 "Bagaimana cara saya mengakses layanan Anda?",
-                "Apa layanan anda"
+                "apa saja layanan anda",
+                "Produk atau layanan apa yang ditawarkan perusahaan Anda?",
+                "Bisakah Anda memberitahu saya tentang produk atau layanan yang perusahaan Anda sediakan?",
+                "Apa produk atau layanan utama dari perusahaan Anda?"
             ]
-        },
-        
+        }
+    },
     "conversation": {
         "greetings": {
             "en": [
                 "hi",
                 "hello",
-                "hey",
-                "howdy",
-                "hi there",
-                "how are you doing?",
-                "hello there",
-                "how are you?"
+                "hey"
             ],
             "id": [
-                "apa kabarmu hari ini?",
-                "apa kabar?",
-                "hi"
+                "halo",
+                "hai",
+                "selamat pagi",
+                "selamat siang",
+                "selamat sore",
+                "selamat malam"
             ]
-        }
-    },
+        },        
         "farewells": {
             "en": [
                 "bye",
                 "goodbye",
                 "see you later",
-                "take care",
-                "so long"
+                "take care"
             ],
             "id": [
                 "selamat tinggal",
-                "sampai jumpa",
-                "dada",
-                "salam"
+                "sampai jumpa"
             ]
         },
         "gratitude": {
@@ -155,22 +144,7 @@
                 "trimakasih banyak",
                 "trimakasih banyak sekali"
             ]
-        },
-            "name": {
-                "en": ["what is your name", "who are you"],
-                "id": ["siapa namamu", "siapa kamu?"]
-            },
-            "how_are_you": {
-                "en": ["i'm fine. how about yourself?", "i'm doing well, and you?"],
-                "id": ["saya baik. bagaimana denganmu?", "saya baik-baik saja, kamu sendiri?"]
-            },
-            "good_to_hear": {
-                "en": ["i've been great. what about you?", "never better, thanks."],
-                "id": ["saya baik-baik saja. bagaimana denganmu?", "tidak pernah lebih baik, terima kasih."]
-            },
-            "well_wishes": {
-                "en": ["good luck with that.", "thanks."],
-                "id": ["semoga sukses dengan itu.", "terima kasih."]
-            }
+        }
+          
     }
 }

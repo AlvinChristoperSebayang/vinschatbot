@@ -1,100 +1,54 @@
-from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
-from langdetect import detect
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.pipeline import make_pipeline
-from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, confusion_matrix
 import random
-import json
 
-# Load questions and answers from JSON files
-with open('questions.json', 'r') as file:
-    questions = json.load(file)
-with open('answers.json', 'r') as file:
-    answers = json.load(file)
+# Data Preprocessing
+# Consider adding stopwords removal and additional text cleaning steps here
 
-# Function to clean text
-def clean_text(text):
-    tokens = word_tokenize(text.lower())
-    stop_words = set(stopwords.words('english') + stopwords.words('indonesian'))
-    filtered_tokens = [word for word in tokens if word.isalnum() and word not in stop_words]
-    lemmatizer = WordNetLemmatizer()
-    lemmatized_tokens = [lemmatizer.lemmatize(token) for token in filtered_tokens]
-    return lemmatized_tokens
+# Feature Engineering
+vectorizer = TfidfVectorizer(ngram_range=(1, 2))  # Using TF-IDF with bi-grams
 
-# Function to extract features
-def extract_features(text):
-    return ' '.join(clean_text(text))
+# Model Training
+X = [text for text, _ in training_data]
+y = [label for _, label in training_data]
 
-# Prepare training data
-training_data = []
-for main_topic, sub_topics in questions.items():
-    for sub_topic, questions_dict in sub_topics.items():
-        for lang, question_list in questions_dict.items():
-            for question in question_list:
-                features = extract_features(question)
-                training_data.append((features, sub_topic))
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Create a pipeline with TfidfVectorizer and MultinomialNB
-pipeline = make_pipeline(TfidfVectorizer(), MultinomialNB())
+X_train_vectorized = vectorizer.fit_transform(X_train)
+X_test_vectorized = vectorizer.transform(X_test)
 
-# Train the pipeline
-pipeline.fit([data[0] for data in training_data], [data[1] for data in training_data])
+# Model Optimization
+model = MultinomialNB()
+model.fit(X_train_vectorized, y_train)
 
-# Function to detect language of text
-def detect_language(text):
-    try:
-        lang = detect(text)
-    except:
-        lang = 'en'
-    return lang
+# Model Evaluation
+y_pred = model.predict(X_test_vectorized)
 
-# Function to get answer for a question
-def get_answer(question_text):
-    # Check for greetings
-    if any(word in question_text.lower() for word in ["hi", "hello", "hey", "halo", "hai"]):
-        return "greetings", "Hello! How can I assist you today?", []
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy * 100:.2f}%")
 
-    lang = detect_language(question_text)
-    features = extract_features(question_text)
-    intent = pipeline.predict([features])[0]
-    main_topic = intent
-    answers_list = answers.get(intent, {}).get(lang, [])
-    random.shuffle(answers_list)
+# Compute confusion matrix
+conf_matrix = confusion_matrix(y_test, y_pred)
+print("\nConfusion Matrix:")
+print(conf_matrix)
 
-    recommended_questions = []
-    for topic, sub_topics in questions.items():
-        if topic == main_topic:
-            continue
-        for sub_topic, questions_dict in sub_topics.items():
-            if sub_topic == intent:
-                lang_questions = questions_dict.get(lang, [])
-                if lang_questions:
-                    recommended_questions.append(random.choice(lang_questions))
+# Prediction Example
+def get_answer(text):
+    vectorized_text = vectorizer.transform([text])
+    predicted_label = model.predict(vectorized_text)[0]
+    return predicted_label
 
-    # Check similarity with training questions
-    for data in training_data:
-        if len(set(question_text.split()).intersection(set(data[0].split()))) < 2:
-            return "notFound", "Sorry, we couldn't find an answer to your question.", []
+# Test the model with sample data
+test_data = [
+    ("What are your company's core values?", "visionAndMission"),
+    ("How can I access your services?", "services"),
+    ("Bagaimana budaya kerja di perusahaan Anda?", "cultureCompany"),
+    # Add more test data here
+]
 
-    return main_topic, answers_list[0], recommended_questions
-
-# Chat loop
-while True:
-    user_input = input("You: ")
-
-    if user_input.lower() == 'exit':
-        print("Goodbye!")
-        break
-
-    main_topic, answer, recommended_questions = get_answer(user_input)
-    print(f"Chatbot: {answer}")
-
-    if recommended_questions:
-        print("You might also be interested in these related questions:")
-        for i, q in enumerate(recommended_questions, 1):
-            print(f"{i}. {q}")
-
-    print()
+for text, actual_label in test_data:
+    predicted_label = get_answer(text)
+    print(f"Text: {text} | Actual: {actual_label} | Predicted: {predicted_label}")

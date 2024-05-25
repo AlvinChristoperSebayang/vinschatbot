@@ -52,9 +52,7 @@ def detect_language(text):
     return lang
 
 # Function to get answer for a question
-# Function to get answer for a question
 def get_answer(question_text):
-    # Check for greetings
     greetings_words = ["hi", "hello", "hey", "halo", "hai", "apa kabar", "how are you", "how is it going"]
     gratitude_words = ["terimakasih","thanks","thank you"]
     if any(word in question_text.lower() for word in greetings_words):
@@ -66,22 +64,20 @@ def get_answer(question_text):
             return "greetings", "Hello! How can I assist you today?", []
 
     lang = detect_language(question_text)
-    features = extract_features(question_text)
-    print('features :', features)
+    features = extract_features(question_text) 
     question_words = set(clean_text(question_text))
     training_words = set(word for data in training_data for word in clean_text(data[0]))
     common_words = question_words.intersection(training_words)
-    print('common_words :',common_words)
+
+
+    if not common_words:
+        print('empty')    
 
     if len(common_words) < 1:
-        if not common_words:
             if any(word in question_text.lower() for word in gratitude_words):
                 intent = "gratitude"
             else:
                 intent = "notFound"
-        else:
-            intent = pipeline.predict([features])[0]
-
     else:
         intent = pipeline.predict([features])[0]
 
@@ -101,22 +97,64 @@ def get_answer(question_text):
                 if lang_questions:
                     recommended_questions.append(random.choice(lang_questions))
 
-    if not answers_list or len(common_words) < 2:
+    if not answers_list or len(common_words) < 1:
         return "notFound", "Sorry, I couldn't find a relevant answer for your question. Please try rephrasing or asking something else.", []
 
     return main_topic, answers_list[0], recommended_questions
 
-exit_keywords = ["exit", "quit", "close"]
 
-while True:
-    question = input("Silakan masukkan pertanyaan Anda atau ketik 'exit' untuk keluar: ")
 
-    if question.lower() in exit_keywords:
-        print("Terima kasih telah menggunakan layanan kami.")
-        break
-    main_topic, answer, recommended_questions = get_answer(question)
-    print("Main Topic:", main_topic)
-    print("Answer:", answer)
-    print("Recommended Questions:")
-    for i, q in enumerate(recommended_questions, 1):
-        print(f"{i}. {q}")
+# Test data
+test_data = [
+    ("What are your company's core values?", "visionAndMission"),
+    ("How can I access your services?", "services"),
+    ("Bagaimana budaya kerja di perusahaan Anda?", "cultureCompany"),
+    ("Can you introduce me to your team?", "teamCompany"),
+    ("Apa rencana masa depan perusahaan Anda?", "futureCompany"),
+    ("thank you friend", "gratitude"),
+    ("jelaskan mengenai mangcoding","aboutMangcoding"),
+    ("jelaskan mengenai sayur mayur","notFound"),
+    ("apa layanan anda?", "services")
+]
+
+# Get predicted labels using get_answer function
+predicted_labels = [get_answer(text)[0] for text, _ in test_data]
+
+# Prepare actual labels
+actual_labels = [label for _, label in test_data]
+
+# Print actual and predicted labels
+print("Actual vs Predicted:")
+for i, (text, actual_label) in enumerate(test_data):
+    print(f"{i+1}. Text: {text} | Actual: {actual_label} | Predicted: {predicted_labels[i]}")
+
+# Compute confusion matrix
+conf_matrix = confusion_matrix(actual_labels, predicted_labels)
+print("\nConfusion Matrix:")
+print(conf_matrix)
+
+# Calculate accuracy
+accuracy = accuracy_score(actual_labels, predicted_labels)
+print(f"Accuracy: {accuracy * 100:.2f}%")
+
+# CM Training Data
+
+# # Prediksi label dari data training menggunakan fungsi get_answer
+# predicted_train_labels = [get_answer(data[0])[0] for data in training_data]
+
+# # Siapkan label aktual
+# actual_train_labels = [data[1] for data in training_data]
+
+# # Hitung confusion matrix
+# conf_matrix_train = confusion_matrix(actual_train_labels, predicted_train_labels)
+# print("\nConfusion Matrix (Training Data):")
+# print(conf_matrix_train)
+
+# # Hitung akurasi
+# accuracy_train = accuracy_score(actual_train_labels, predicted_train_labels)
+# print(f"Accuracy (Training Data): {accuracy_train * 100:.2f}%")
+
+# # (Opsional) Menampilkan label aktual dan prediksi untuk data training
+# print("\nActual vs Predicted (Training Data):")
+# for i, (text, actual_label) in enumerate(zip(training_data, actual_train_labels)):
+#     print(f"{i+1}. Text: {text[0]} | Actual: {actual_label} | Predicted: {predicted_train_labels[i]}")
