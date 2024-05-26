@@ -99,9 +99,7 @@
                 "Bisakah Anda memberitahu saya tentang produk atau layanan yang perusahaan Anda sediakan?",
                 "Apa produk atau layanan utama dari perusahaan Anda?"
             ]
-        }
-    },
-    "conversation": {
+        },
         "greetings": {
             "en": [
                 "hi",
@@ -145,6 +143,6 @@
                 "trimakasih banyak sekali"
             ]
         }
-          
     }
+       
 }

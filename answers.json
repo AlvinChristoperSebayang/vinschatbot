@@ -181,38 +181,6 @@
             "Saya baik, terima kasih. Bagaimana kabarmu?"
         ]
     },
-    "good_to_hear": {
-        "en": [
-            "I'm glad to hear that. I've been doing well too.",
-            "That's great to hear! I've been good as well.",
-            "I'm happy to hear that. I've been doing well too.",
-            "That's awesome! I've been great as well.",
-            "I'm pleased to hear that. I've been good too."
-        ],
-        "id": [
-            "Saya senang mendengarnya. Saya juga baik-baik saja.",
-            "Senang mendengarnya! Saya juga baik.",
-            "Saya bahagia mendengarnya. Saya juga baik-baik saja.",
-            "Bagus sekali! Saya juga baik.",
-            "Saya senang mendengarnya. Saya juga baik."
-        ]
-    },
-    "well_wishes": {
-        "en": [
-            "Thank you!",
-            "Thanks!",
-            "Have a great day!",
-            "Good luck with that!",
-            "Wishing you all the best!"
-        ],
-        "id": [
-            "Terima kasih!",
-            "Terima kasih!",
-            "Semoga harimu menyenangkan!",
-            "Semoga sukses dengan itu!",
-            "Semoga sukses untukmu!"
-        ]
-    },
     "notFound": {
         "en": [
             "Sorry, we couldn't find an answer to your question. Is there any other question we can help answer?"

@@ -1,7 +1,7 @@
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-from langdetect import detect
+from langdetect import detect,LangDetectException
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import make_pipeline
@@ -61,17 +61,21 @@ best_pipeline = grid_search.best_estimator_
 def detect_language(text):
     try:
         lang = detect(text)
-    except:
+        if lang not in ['id', 'en']:
+            lang = 'en'
+    except LangDetectException:
         lang = 'en'
     return lang
 
 # Function to get answer for a question
 def get_answer(question_text):
     lang = detect_language(question_text)
+    print(lang)
     features = extract_features(question_text)
     question_words = set(clean_text(question_text))
     training_words = set(word for data in training_data for word in clean_text(data[0]))
     common_words = question_words.intersection(training_words)
+    print('common_words :', common_words)
 
     if len(common_words) < 1:
         intent = "notFound"
@@ -79,7 +83,9 @@ def get_answer(question_text):
         intent = best_pipeline.predict([features])[0]
 
     main_topic = intent
+    print(main_topic)
     answers_list = answers.get(intent, {}).get(lang, [])
+    print("answers_list :", answers_list)
     random.shuffle(answers_list)
 
     recommended_questions = []
