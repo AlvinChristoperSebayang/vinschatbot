@@ -3,17 +3,16 @@ from flask_cors import CORS
 from chatbotV2 import get_answer
 
 app = Flask(__name__)
-CORS(app)  # Tambahkan ini untuk mengaktifkan CORS
+CORS(app)  
 
 @app.route('/chatbot', methods=['POST'])
 def chatbot():
     data = request.get_json()
     question = data['question']
-    main_topic, answer, recommended_questions = get_answer(question)
+    main_topic, answer = get_answer(question)
     response = {
         'main_topic': main_topic,
-        'answer': answer,
-        'recommended_questions': recommended_questions
+        'answer': answer
     }
     return jsonify(response)
 

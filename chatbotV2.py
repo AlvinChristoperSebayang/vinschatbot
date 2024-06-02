@@ -19,7 +19,7 @@ with open('answers.json', 'r') as file:
     answers = json.load(file)
 
 custom_stopword = {
-    'how', 'can', 'your', 'are', 'the', 'is', 'of', 'and', 'to', 'in', 'hi', 'hello', 'hey', 'halo', 'hai', 'apa kabar',
+    'how', 'can', 'your', 'and', 'to', 'in', 'hi', 'hello', 'hey', 'halo', 'hai', 'apa kabar',
     'how are you', 'how is it going', 'terimakasih', 'thanks', 'thank you', 'dada', 'bye', 'good bye', 'hi', 'hello', 
     'halo', 'hai', 'selamat pagi', 'selamat siang', 'selamat sore', 'selamat malam', 'tentang', 'about',   "bye","goodbye", "see you later","take care","dada"
 }
@@ -31,6 +31,7 @@ def clean_text(text):
     filtered_tokens = [word for word in tokens if word.isalnum() and word not in stop_words]
     lemmatizer = WordNetLemmatizer()
     lemmatized_tokens = [lemmatizer.lemmatize(token) for token in filtered_tokens]
+   
     return lemmatized_tokens
 
 # Function to extract features
@@ -70,51 +71,95 @@ def detect_language(text):
 # Function to get answer for a question
 def get_answer(question_text):
     lang = detect_language(question_text)
-    print(lang)
     features = extract_features(question_text)
     question_words = set(clean_text(question_text))
     training_words = set(word for data in training_data for word in clean_text(data[0]))
     common_words = question_words.intersection(training_words)
-    print('common_words :', common_words)
-
     if len(common_words) < 1:
         intent = "notFound"
     else:
         intent = best_pipeline.predict([features])[0]
 
+    
+
     main_topic = intent
-    print(main_topic)
     answers_list = answers.get(intent, {}).get(lang, [])
-    print("answers_list :", answers_list)
     random.shuffle(answers_list)
+    if not answers_list:
+        main_topic = "notFound"
+    return main_topic, answers_list[0]
 
-    recommended_questions = []
-    for topic, sub_topics in questions.items():
-        if topic == main_topic:
-            continue
-        for sub_topic, questions_dict in sub_topics.items():
-            if sub_topic == intent:
-                lang_questions = questions_dict.get(lang, [])
-                if lang_questions:
-                    recommended_questions.append(random.choice(lang_questions))
 
-    if not answers_list or len(common_words) < 1:
-        return "notFound", "Sorry, I couldn't find a relevant answer for your question. Please try rephrasing or asking something else.", []
+# predicted_intents = []
+# actual_intents = []
 
-    return main_topic, answers_list[0], recommended_questions
+# # Memperoleh hasil prediksi dan intent sebenarnya untuk setiap pertanyaan dalam test data
+# for question_text, actual_intent, _ in test_data:
+#     predicted_intent, _ = get_answer(question_text)
+#     predicted_intents.append(predicted_intent)
+#     actual_intents.append(actual_intent)
 
-exit_keywords = ["exit", "quit", "close"]
+# # Membuat confusion matrix
+# cm = confusion_matrix(actual_intents, predicted_intents)
 
-while True:
-    question = input("Silakan masukkan pertanyaan Anda atau ketik 'exit' untuk keluar: ")
+# # Menampilkan confusion matrix menggunakan heatmap
+# plt.figure(figsize=(10, 8))
+# sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=best_pipeline.classes_, yticklabels=best_pipeline.classes_)
+# plt.xlabel('Predicted')
+# plt.ylabel('Actual')
+# plt.title('Confusion Matrix')
+# plt.show()
+    
 
-    if question.lower() in exit_keywords:
-        print("Terima kasih telah menggunakan layanan kami.")
-        break
-    main_topic, answer, recommended_questions = get_answer(question)
-    print("Main Topic:", main_topic)
-    print("Answer:", answer)
-    print("Recommended Questions:")
-    for i, q in enumerate(recommended_questions, 1):
-        print(f"{i}. {q}")
 
+# # Menghitung dan mencetak nilai akurasi, presisi, dan recall
+# accuracy = accuracy_score(actual_intents, predicted_intents)
+# precision = precision_score(actual_intents, predicted_intents, average='weighted')
+# recall = recall_score(actual_intents, predicted_intents, average='weighted')
+
+# print(f'Akurasi: {accuracy:.2f}')
+# print(f'Presisi: {precision:.2f}')
+# print(f'Recall: {recall:.2f}')
+# exit_keywords = ["exit", "quit", "close"]
+# while True:
+#     question = input("Silakan masukkan pertanyaan Anda atau ketik 'exit' untuk keluar: ")
+
+#     if question.lower() in exit_keywords:
+#         print("Terima kasih telah menggunakan layanan kami.")
+#         break
+#     main_topic, answer = get_answer(question)
+#     print("Main Topic/Intent:", main_topic)
+#     print("Answer:", answer)
+
+# Contoh teks
+# Teks
+# text = "what is your services?"
+# print('Pertanyaan :', text)
+
+# # Case Folding
+# case_folding = text.lower()
+# print('Hasil Case Folding:', case_folding)
+
+# # Tokenisasi
+# tokens = word_tokenize(case_folding)
+# print('Hasil Tokenizing:', tokens)
+
+# # Lematisasi dan Filtering
+# lemmatizer = WordNetLemmatizer()
+# stop_words = set(stopwords.words('english') + stopwords.words('indonesian')) - custom_stopword
+# filtered_tokens = [word for word in tokens if word.isalnum() and word not in stop_words]
+# lemmatized_tokens = [lemmatizer.lemmatize(token) for token in filtered_tokens]
+# result_lemma = ' '.join(lemmatized_tokens)
+# print('Hasil Lemmatization dan Filtering :', result_lemma)
+
+# # Menggunakan TfidfVectorizer untuk menghitung TF-IDF
+# vectorizer = TfidfVectorizer()
+# tfidf_matrix = vectorizer.fit_transform([result_lemma])
+
+# # Mendapatkan nama fitur (term) dan nilai TF-IDF
+# feature_names = vectorizer.get_feature_names_out()
+# tfidf_values = tfidf_matrix.toarray()[0]
+
+# # Mencetak hasil TF-IDF
+# for term, tfidf in zip(feature_names, tfidf_values):
+#     print(f"{term}: {tfidf}")

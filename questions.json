@@ -46,18 +46,6 @@
                 "Apa nilai inti dari perusahaan Anda?"
             ]
         },
-        "teamCompany": {
-            "en": [
-                "Can you introduce me to your team?",
-                "Who are the key members of your team?",
-                "Tell me about the people who work at your company."
-            ],
-            "id": [
-                "Bisakah Anda memperkenalkan saya kepada tim Anda?",
-                "Siapa saja anggota kunci tim Anda?",
-                "Ceritakan tentang orang-orang yang bekerja di perusahaan Anda."
-            ]
-        },
         "futureCompany": {
             "en": [
                 "What are your company's future plans?",
@@ -100,6 +88,60 @@
                 "Apa produk atau layanan utama dari perusahaan Anda?"
             ]
         },
+        "pricing": {
+            "en": [
+                "What are the pricing options for website creation services?",
+                "Can you provide me with the pricing details for website development services?",
+                "How much does it cost to create a website with your company?",
+                "What is the price range for your website design services?",
+                "Do you offer different pricing packages for website development?"
+            ],
+            "id": [
+                "Apa pilihan harga untuk layanan pembuatan website?",
+                "Dapatkah Anda memberikan rincian harga untuk layanan pengembangan website?",
+                "Berapa biaya untuk membuat website dengan perusahaan Anda?",
+                "Berapa kisaran harga untuk layanan desain website Anda?",
+                "Apakah Anda menawarkan paket harga berbeda untuk pengembangan website?"
+            ]
+        },
+        "shopifyOverview": {
+            "en": [
+                "What is Shopify?",
+                "Can you explain what Shopify is?",
+                "How does Shopify work?"
+            ],
+            "id": [
+                "Apa itu Shopify?",
+                "Bisakah Anda menjelaskan apa itu Shopify?",
+                "Bagaimana cara kerja Shopify?"
+            ]
+        },
+        "wordpressOverview": {
+            "en": [
+                "What is WordPress?",
+                "Can you explain what WordPress is?",
+                "How does WordPress work?"
+            ],
+            "id": [
+                "Apa itu WordPress?",
+                "Bisakah Anda menjelaskan apa itu WordPress?",
+                "Bagaimana cara kerja WordPress?"
+            ]
+        },
+        "order": {
+                "en": [
+                "How can I place an order with your company?",
+                "What is the process for ordering your products/services?",
+                "Can you guide me through the steps to place an order?"
+                ],
+                "id": [
+                "Bagaimana cara memesan produk/jasa dari perusahaan Anda?",
+                "Apa proses untuk memesan produk/jasa Anda?",
+                "Dapatkah Anda memandu saya melalui langkah-langkah untuk memesan produk/jasa?",
+                "Saya ingin melakukan pemesanan",
+                "saya ingin pesan"
+                ]
+            },
         "greetings": {
             "en": [
                 "hi",
@@ -142,7 +184,19 @@
                 "trimakasih banyak",
                 "trimakasih banyak sekali"
             ]
+        },
+        "maintenance": {
+            "en": [
+                "What maintenance services do you offer?",
+                "Can you explain your website maintenance plans?",
+                "What steps are involved in website maintenance?"
+            ],
+            "id": [
+                "Apa layanan pemeliharaan yang Anda tawarkan?",
+                "Apakah Anda menyediakan layanan pemeliharaan rutin untuk situs web?",
+                "Bisakah Anda menjelaskan rencana pemeliharaan situs web Anda?",
+                "Langkah-langkah apa saja yang terlibat dalam pemeliharaan situs web?"
+            ]
         }
     }
-       
-}
+    }

@@ -151,3 +151,9 @@ def calculate_metrics(cm):
 total_TP_train, total_TN_train, total_FP_train, total_FN_train = calculate_metrics(cm_train)
 
 print(f'Total TP (Training Data): {total_TP_train}, Total TN (Training Data): {total_TN_train}, Total FP (Training Data): {total_FP_train}, Total FN (Training Data): {total_FN_train}')
+
+# Display misclassified questions
+print("\nMisclassified Questions:")
+for question, true_label, pred_label in misclassified:
+    print(f"Question: {question}")
+    print(f"True Label: {true_label}, Predicted Label: {pred_label}\n")

@@ -1,16 +1,59 @@
 {
-    "testing":[
-        {
-            "kowkoawko" : "awkokaowko",
-            "koawkoakowoawkoawko" : "akowkoawo" 
+        "aboutMangcoding" :{
+            "en": [
+                "can you tell me about mangcoding"
+            ],
+            "id": [
+                "jelaskan kepada saya tentang perusahaan mangcoding"
+            ]
         },
-        {
-            "kowkoawko" : "awkokaowko",
-            "koawkoakowoawkoawko" : "akowkoawo" 
+        "historyCompany": {
+            "en": [
+                "What is the history of your company?"
+            ],
+            "id": [
+                "Apa sejarah perusahaan Anda?"
+            ]
         },
-        {
-            "kowkoawko" : "awkokaowko",
-            "koawkoakowoawkoawko" : "akowkoawo" 
+
+        "visionAndMission": {
+            "en": [
+                "What is your company's vision and mission?"        
+            ],
+            "id": [
+                "Apa visi dan misi perusahaan Anda?"
+            ]
+        },
+        "teamCompany": {
+            "en": [
+                "Can you introduce me to your team?"
+            ],
+            "id": [
+                "Bisakah Anda memperkenalkan saya kepada tim Anda?"
+            ]
+        },
+        "futureCompany": {
+            "en": [
+                "What are your company's future plans?"
+            ],
+            "id": [
+                "Apa rencana masa depan perusahaan Anda?"
+            ]
+        },
+        "services": {
+            "en": [
+                "Can you explain more about the services you provide?"
+            ],
+            "id": [
+                "Apa saja layanan yang Anda tawarkan?"
+            ]
+        },
+        "pricing": {
+            "en": [
+                "What are the pricing options for website creation services?"
+            ],
+            "id": [
+                "Apa pilihan harga untuk layanan pembuatan website?"
+            ]
         }
-    ]
-}
+    }
