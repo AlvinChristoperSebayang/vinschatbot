@@ -2,9 +2,6 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import time
 from chatbotV2 import get_answer
-import nltk
-
-nltk.download('stopwords')
 
 app = Flask(__name__)
 CORS(app)
