@@ -11,7 +11,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import random
 import json
-
+nltk.download('stopwords')
+nltk.download('wordnet')
 # Load questions and answers from JSON files
 with open('questions.json', 'r') as file:
     questions = json.load(file)
